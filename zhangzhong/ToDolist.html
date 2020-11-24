@@ -1,0 +1,195 @@
+<!--
+ * @Author: 张仲
+ * @Date: 2020-11-24 12:18:58
+ * @LastEditTime: 2020-11-24 17:56:35
+ * @Description: In User Settings Edit
+ * @FilePath: \zhangzhong\TodoList.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            width: 500px;
+            margin: 50px auto;
+            background-color: rgb(250, 250, 250);
+            border: 1px solid #eee;
+        }
+
+        .ul {
+            max-height: 400px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            width: 180px;
+            margin: 0 auto;
+        }
+
+        #app .span {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        ul li {
+            list-style: none;
+            width: 500px;
+            height: 50px;
+            border: 1PX solid #eee;
+            background-color: rgb(248, 241, 241);
+        }
+
+        ul li p {
+            margin: 15px;
+        }
+
+        ul li p span {
+            margin-left: 15px;
+        }
+
+        .green {
+            background-color: rgb(133, 236, 133);
+        }
+
+        .through {
+            text-decoration: line-through;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 20px;
+            width: 500px;
+            height: 120px;
+            border: 1px solid #eee;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .footer-inputBox {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-text {
+            flex: 0 0 auto;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer-input {
+            flex: 1 1 auto;
+            height: 30px;
+        }
+
+        .footer-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 22px;
+            width: 100px;
+            height: 32px;
+            background-color: blue;
+            color: #fff;
+        }
+
+        .rest {
+            font-size: 14px;
+            font-weight: bold;
+        }
+	</style>
+</head>
+
+<body>
+<div id="app">
+	<div class="nav">
+		<span class="span">ToDoList</span>
+	</div>
+	<ul class="ul">
+		<li v-for='(item,index) in list' :key=index @click='chang(item)' :class="{green:item.ischeck}">
+			<p>
+				<input type="checkbox" v-model='item.ischeck'>
+				<span :class="{through:item.ischeck}">{{item.name}}</span>
+			</p>
+		</li>
+		<li>
+			<p class="rest">{{getCheck}}完成/{{getListLength}}总数</p>
+		</li>
+	</ul>
+	<div class="footer">
+		<div class="footer-inputBox">
+			<p class="footer-text">Tesk</p>
+			<input class="footer-input" type="text" v-model='newName' placeholder="想做点啥">
+		</div>
+		<button class="footer-btn" @click="addList()">Save Tesk</button>
+	</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            newName: '',
+            list: [
+                { name: '写代码', ischeck: 0 },
+                { name: '吃饭', ischeck: 0 },
+                { name: '睡觉', ischeck: 0 },
+                { name: '打豆豆', ischeck: 1 },
+            ]
+        },
+        //计算属性
+        computed: {
+            //动态获取数组长度
+            getListLength: function () {
+                return this.list.length;
+            },
+            //获取数据中ischeck状态为ture的
+            getCheck: function () {
+                var sum = 0;
+                this.list.forEach((item) => {
+                    if (item.ischeck) {
+                        sum++;
+                    }
+                });
+                return sum
+            }
+        },
+        //方法
+        methods: {
+            //添加新的li对象到list中
+            addList() {
+                if (this.newName != "") {
+                    if (this.newName != " ") {
+                        alert("输入空格无效！")
+                    } else {
+                        this.list.unshift({ name: this.newName, ischeck: false });
+                        this.newName = '';
+                    }
+
+                } else {
+                    alert("请先输入，再添加！")
+                }
+
+            },
+            //更改传值过来的对象的状态
+            chang(item) {
+                item.ischeck = !item.ischeck;
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

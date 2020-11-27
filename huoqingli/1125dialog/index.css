@@ -1,0 +1,119 @@
+/**
+ * author：霍青利
+ * time： 2020年11月25日
+ * */
+
+/* 修改密码按钮 */
+#editPwd {
+    width: 72px;
+    background: #1890FF;
+    border: none;
+    color: #FFFFFF;
+}
+/* 遮罩层样式 */
+#dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.60);
+}
+/* 信息编辑区域 */
+.info-edit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 435px;
+    height: 340px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+/* 信息编辑头部 */
+.info-edit-title {
+    height: 55px;
+    line-height: 56px;
+    padding: 0 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+    font-size: 16px;
+    color: rgba(0,0,0,0.85);
+}
+/* 关闭弹出框的按钮 */
+.close-dialog {
+    float: right;
+    width: 10px;
+    height: 10px;
+}
+.close-dialog img {
+    width: 10px;
+    height: 10px;
+}
+/* 信息编辑的主体区域 */
+.info-edit-content {
+    padding: 20px 24px 0;
+}
+/* form 表单的 label */
+.content-label {
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    text-align: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: rgba(0,0,0,0.85);
+}
+/* form 表单的 input */
+.content-input {
+    width: 200px;
+    height: 28px;
+    margin-left: 10px;
+    padding-left: 10px;
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+}
+
+#account {
+    background: rgba(0,0,0,0.10);
+}
+/* 底部的按钮父元素 */
+.info-edit-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 55px;
+    padding-right: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+/* 按钮的公共样式 */
+.button-item {
+    width: 65px;
+    height: 32px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(0,0,0,0.65);
+}
+/* 确定按钮的样式 */
+.button-confirm {
+    background: #1890FF;
+    border: none;
+    color: #FFFFFF;
+}
+/* 错误信息的样式 */
+.warning-tips {
+    visibility: hidden;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 114px;
+    color: #FF4420;
+}

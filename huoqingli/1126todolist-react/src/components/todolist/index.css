@@ -1,0 +1,81 @@
+/**
+ * @Description: 
+ * @author 霍青利
+ * @date 2020/11/26 20:37
+*/
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 780px;
+  margin: 50px auto;
+  background: #f6f6f6;
+}
+.container .todo-list {
+  width: 780px;
+  border-radius: 2px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.container .todo-list .complete-task {
+  background: #dff1db;
+  text-decoration: line-through;
+}
+.container .todo-list h1 {
+  width: 100%;
+  text-align: center;
+}
+.container .todo-list ul {
+  max-height: 240px;
+  overflow-y: scroll;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.container .todo-list ul li {
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid #ccc;
+}
+.container .todo-list ul li:last-child {
+  border-bottom: none;
+}
+.container .todo-list .list-count {
+  height: 48px;
+  line-height: 48px;
+}
+.container .add-list {
+  width: 780px;
+  height: 120px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.container .add-list .add-list-input {
+  height: 40px;
+  line-height: 40px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.container .add-list .add-list-input input {
+  flex: 1;
+  outline: none;
+  margin-left: 30px;
+}
+.container .add-list button {
+  float: right;
+  overflow: hidden;
+  height: 36px;
+  color: #fff;
+  background-color: #307bb4;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */

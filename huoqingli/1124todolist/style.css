@@ -1,0 +1,62 @@
+#app {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 720px;
+
+}
+
+.list-body {
+    margin: 0;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+li {
+    list-style-type: none;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc; 
+}
+
+li:last-child {
+    border: none;
+}
+
+
+
+p {
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    line-height: 48px;
+}
+
+.del-line {
+    text-decoration: line-through;
+    background-color: rgb(163, 202, 189);
+
+}
+
+.input-task {
+    height: 28px;
+    width: 480px;
+    outline: none;
+    
+}
+
+button {
+    height: 34px;
+    outline: none;
+    background-color: rgb(45, 115, 247);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}

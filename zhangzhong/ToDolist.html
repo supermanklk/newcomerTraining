@@ -171,7 +171,7 @@
             //添加新的li对象到list中
             addList() {
                 if (this.newName != "") {
-                    if (this.newName != " ") {
+                    if (this.newName == " ") {
                         alert("输入空格无效！")
                     } else {
                         this.list.unshift({ name: this.newName, ischeck: false });

@@ -5,7 +5,7 @@
  */
 
 import React,{Component} from 'react';
-import {Menu,Breadcrumb,Card,Button,Space,Row,Col,Input,Tag,Table,Pagination,ConfigProvider } from 'antd';
+import {Menu,Breadcrumb,Card,Button,Space,Row,Col,Input,Tag,Table,Pagination,ConfigProvider,Layout } from 'antd';
 import {
     MoneyCollectOutlined,
     AuditOutlined,
@@ -18,18 +18,21 @@ import {
 } from '@ant-design/icons';
 import './index.css';
 import zhCN from 'antd/es/locale/zh_CN';
-const {TextArea} = Input;
 
+import * as FetchRequest from '../../utils/request';
+
+
+const {TextArea} = Input;
+const { Header, Sider, Content } = Layout;
 
 class Task extends Component{
     constructor(props){
         super(props);
         this.state = {
+            collapsed: false,
             info: {},
             inputValue: '',
-            dataSource: [
-
-            ],
+            dataSource: [],
             columns: [
                 {
                     title: '筑创星',
@@ -69,36 +72,23 @@ class Task extends Component{
      * 获取任务相关的信息
      * @author 霍青利
      * @date 2020/11/27 17:11
-     * @param
-     * @param
-     * @return
+     *
     */
     getTaskInfo(){
-        // const opts  = {
-        //     social_credit_code: '91410100317580074M',
-        //     id: 1365,
-        //     page: 1,
-        //     page_number: 10,
-        //     taskStatus: 'all'
-        // };
+        // 请求参数
         const opts = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10&taskStatus=all"
-
+        // 请求地址
         const url = 'http://prebin.zhushang.net/zhu_pro_zb/public/index.php/api/fetchAllBUserPostedTaskAction';
-        fetch(url,{
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: opts
-        })
-            .then(response => response.json())
+        // 发送请求
+        FetchRequest.post(url, opts)
             .then(res => {
-                // console.log(res.data[0])
                 this.setState({
                     info: res.data[0],
                 })
-            }).catch(error => {
-        });
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     /**
@@ -109,40 +99,19 @@ class Task extends Component{
     */
     getRegisterInfo() {
         const params = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10";
-
         const url = 'http://prebin.zhushang.net/zhu_pro_zb/public/index.php/api/fetchBUserTaskEmplyeeAction';
-        fetch(url,{
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: params
-        })
-            .then(response => response.json())
+
+        FetchRequest.post(url, params)
             .then(res => {
-                // console.log(res.data)
-                const resData = res.data;
                 /* 格式化对象数组 */
-                const dataResource = resData.map(item => {
-                    const container = {};
-                    container['key'] = item.id
-                    container['business_name'] = item.business_name;
-                    container['username'] = item.username;
-                    container['tel'] = item.tel;
-                    container['business_license'] = item.business_license;
-                    container['certification_status'] = item.certification_status;
-                    container['receive_time'] = item.receive_time;
-
-                    return container
-                })
-
+                const dataResource = this.formatData(res.data);
                 this.setState({
                     dataSource: [...dataResource]
                 })
-
-            }).catch(error => {
-            console.log(error)
-        });
+            })
+            .catch(error => {
+                console.log(error)
+            });
     }
 
     /**
@@ -152,7 +121,6 @@ class Task extends Component{
      * @param e
     */
     handleChange(e){
-        // console.log(e.target.value);
         this.setState({
             inputValue: e.target.value
         })
@@ -160,99 +128,98 @@ class Task extends Component{
 
 
     /**
+     * 格式化对象数组
+     * @author 霍青利
+     * @date 2020/11/29 17:06
+     * @param data
+     * @return {array}
+    */
+    formatData(data) {
+        return data.map(item => {
+            const container = {};
+            container['key'] = item.id
+            container['business_name'] = item.business_name;
+            container['username'] = item.username;
+            container['tel'] = item.tel;
+            container['business_license'] = item.business_license;
+            container['certification_status'] = item.certification_status;
+            container['receive_time'] = item.receive_time;
+            return container
+        })
+    }
+
+    /**
      * 搜索的方法
      * @author 霍青利
      * @date 2020/11/27 18:42
-     * @param
-     * @param
-     * @return
+     * @param value
+     *
     */
     searchInfo(value) {
-        let newValue = parseInt(value);
-        let opts = ""
-        if (typeof newValue === 'number') {
-            opts = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10&taskStatus=all&tel=" + value;
-        } else if (typeof  newValue === 'string') {
-            opts = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10&taskStatus=all&username=" + value;
+        let opts = "";
+        // 如果不是一个数字
+        if (isNaN(value)) {
+            opts = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10&taskStatus=all&username=" + value.trim();
+        } else {
+            opts = "social_credit_code=91410100317580074M&id=1365&page=1&page_number=10&taskStatus=all&tel=" + value.trim()
         }
-        console.log(opts);
-        //
         const searchUrl = 'http://prebin.zhushang.net/zhu_pro_zb/public/index.php/api/fetchBUserTaskEmplyeeAction';
-        fetch(searchUrl,{
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: opts
-        })
-            .then(response => response.json())
+
+        FetchRequest.post(searchUrl, opts)
             .then(res => {
-                // console.log(res.data[0]);
-                const resData = res.data;
                 /* 格式化对象数组 */
-                const dataResource = resData.map(item => {
-                    const container = {};
-                    container['key'] = item.id
-                    container['business_name'] = item.business_name;
-                    container['username'] = item.username;
-                    container['tel'] = item.tel;
-                    container['business_license'] = item.business_license;
-                    container['certification_status'] = item.certification_status;
-                    container['receive_time'] = item.receive_time;
-
-                    return container
-                })
-
+                const dataResource = this.formatData(res.data);
                 this.setState({
                     dataSource: [...dataResource]
                 })
+            })
+            .catch(error => {
+                console.log(error)
+            });
+    }
 
-            }).catch(error => {
-            console.log(error)
-        });
-
+    onKeyup(e) {
+        if (e.keyCode === 13) {
+            this.searchInfo(e.target.value);
+        }
     }
 
     componentDidMount(){
         this.getTaskInfo();
         this.getRegisterInfo();
-
     }
 
-
     render(){
-
         return (
             <div className="container">
                 {/* 侧边导航 */}
-                <div className="aside-nav">
-                    <Menu
-                        defaultSelectedKeys={['1']}
-                        defaultOpenKeys={['sub1']}
-                        mode="inline"
-                        theme="dark"
-                    >
-                        <Menu.Item className="logo">
-                            <img src="./logo.png" alt=""/>
-
-                        </Menu.Item>
-                        <Menu.Item key="1" icon={<AuditOutlined/>}>
-                            任务中心
-                        </Menu.Item>
-                        <Menu.Item key="2" icon={<MoneyCollectOutlined/>}>
-                            结算中心
-                        </Menu.Item>
-                        <Menu.Item key="3" icon={<PrinterOutlined/>}>
-                            开票管理
-                        </Menu.Item>
-                        <Menu.Item key="4" icon={<UsergroupAddOutlined/>}>
-                            筑创星管理
-                        </Menu.Item>
-                        <Menu.Item key="5" icon={<UserOutlined/>}>
-                            用户中心
-                        </Menu.Item>
-                    </Menu>
-                </div>
+                    <div className="aside-nav">
+                        <Menu
+                            defaultSelectedKeys={['1']}
+                            defaultOpenKeys={['sub1']}
+                            mode="inline"
+                            theme="dark"
+                        >
+                            <Menu.Item className="logo">
+                                <img src="./logo.png" alt=""/>
+                            </Menu.Item>
+                            <Menu.Item key="1" icon={<AuditOutlined/>}>
+                                任务中心
+                            </Menu.Item>
+                            <Menu.Item key="2" icon={<MoneyCollectOutlined/>}>
+                                结算中心
+                            </Menu.Item>
+                            <Menu.Item key="3" icon={<PrinterOutlined/>}>
+                                开票管理
+                            </Menu.Item>
+                            <Menu.Item key="4" icon={<UsergroupAddOutlined/>}>
+                                筑创星管理
+                            </Menu.Item>
+                            <Menu.Item key="5" icon={<UserOutlined/>}>
+                                用户中心
+                            </Menu.Item>
+                        </Menu>
+                    </div>
                 {/* 主体内容区域 */}
                 <div className="main">
                     {/* 顶部信息 */}
@@ -271,7 +238,7 @@ class Task extends Component{
                         <Breadcrumb>
                             <Breadcrumb.Item>首页</Breadcrumb.Item>
                             <Breadcrumb.Item>
-                                <a href="">任务中心</a>
+                                <a href="/">任务中心</a>
                             </Breadcrumb.Item>
                             <Breadcrumb.Item>任务详情</Breadcrumb.Item>
                         </Breadcrumb>
@@ -364,24 +331,17 @@ class Task extends Component{
 
                             {/* 报名详情部分 */}
                             <div className="register-details">
-                                <Row>
-                                    <Col span={7}>
-                                        <div className="register-text">报名详情</div>
-                                    </Col>
-                                    <Col span={7}>
-                                        <div className="tabs">
-                                            <div className="tabs-panel">全部(3)</div>
-                                            <div className="tabs-panel">已报名(2)</div>
-                                            <div className="tabs-panel">待报名(1)</div>
-                                        </div>
-                                    </Col>
-                                    <Col span={3}>
-                                        <div className="tabs-panel-remove">已移除(1)</div>
-                                    </Col>
-                                    <Col span={6}>
-                                        <div><Input placeholder="请输入筑创星/手机号查询" onChange={(e) => this.handleChange(e)} suffix={<SearchOutlined onClick={() => this.searchInfo(this.state.inputValue)}/>}/></div>
-                                    </Col>
-                                </Row>
+
+                                <div className="register-text">报名详情</div>
+                                <div className="tabs">
+                                    <div className="tabs-panel">全部(3)</div>
+                                    <div className="tabs-panel">已报名(2)</div>
+                                    <div className="tabs-panel">待报名(1)</div>
+                                </div>
+                                <div className="tabs-panel-remove">已移除(1)</div>
+
+                                <div><Input placeholder="请输入筑创星/手机号查询" onKeyUp={(e) => this.onKeyup(e)} onChange={(e) => this.handleChange(e)} suffix={<SearchOutlined onClick={() => this.searchInfo(this.state.inputValue)}/>}/></div>
+
                             </div>
 
                             {/* 报名表格 */}
@@ -393,7 +353,7 @@ class Task extends Component{
                                     pagination={false}
                                 />
                                 <div className="table-pagination">
-                                    <ConfigProvider local={zhCN}>
+                                    <ConfigProvider locale={zhCN}>
                                         <Pagination
                                             total={this.state.dataSource.length}
                                             showSizeChanger

@@ -1,0 +1,163 @@
+.ant-menu-item-selected {
+    background: #31ADCA !important;
+}
+.ant-menu-item {
+    height: 60px !important;
+    line-height: 60px !important;
+    font-size: 14px !important;
+    color: #fff !important;
+}
+.ant-card-body {
+    padding: 0 !important;
+}
+.ant-btn {
+    width: 88px !important;
+    border-radius: 4px !important;
+}
+.ant-divider {
+    height: 28px !important;
+}
+.container {
+    height: 100vh;
+    //background: rgb(240, 242, 245);
+    display: flex;
+    .aside-nav {
+        width: 256px;
+        height: 100%;
+        .ant-menu {
+            height: 100%;
+            position: fixed;
+            width: 256px;
+            top: 0;
+            left: 0;
+        }
+        .logo {
+            background: none !important;
+            height: 66px !important;
+            line-height: 66px !important;
+            img {
+                width: 194px;
+                height: 58px;
+            }
+
+        }
+    }
+    .main {
+        flex: 1;
+        .main-top {
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            height: 64px;
+            line-height: 64px;
+            background: #fff;
+            .main-top-left {
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .main-top-right {
+                color: rgba(0,0,0,0.65);
+
+                .user-avatar {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background: #D4D7D9;
+                    margin: 0 10px 0 25px;
+                }
+            }
+        }
+        .main-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 98px;
+            border-top: 1px solid #E9E9E9;
+            border-bottom: 1px solid #E9E9E9;
+            padding: 15px 25px 20px;
+            background: #fff;
+            .text-task-details {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        .main-content {
+            padding: 20px 25px 0;
+            .ant-card {
+                padding: 17px 34px 25px !important;
+            }
+            .card-button {
+                display: flex;
+                justify-content: space-between;
+
+            }
+            .card-task {
+                border-bottom: 1px solid #D4D7D9;
+                padding-bottom: 20px;
+                .task-name {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 15px;
+                }
+                .task-item {
+                    margin: 5px 0;
+                }
+
+            }
+            .register-details {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                .register-text {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .tabs {
+                    display: flex;
+                    width: 300px;
+                    height: 28px;
+                    line-height: 25px;
+                    border-radius: 4px;
+                    text-align: center;
+                    cursor: pointer;
+                    .tabs-panel:first-child {
+                        color: #346BF5;
+                        border-radius: 4px 0 0 4px;
+                        border: 1px solid #346BF5;
+                    }
+                    .tabs-panel:nth-child(2) {
+                        border-left: none;
+                        border-right: none;
+                    }
+                    .tabs-panel:last-child {
+                        border-radius: 0 4px 4px 0;
+                    }
+                    .tabs-panel {
+                        flex: 1;
+                        border: 1px solid #D4D7D9;
+                    }
+                }
+                .tabs-panel-remove {
+                    width: 98px;
+                    height: 28px;
+                    line-height: 25px;
+                    text-align: center;
+                    border: 1px solid #D4D7D9;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+            .register-table {
+                .table-pagination {
+                    float: right;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+    }
+}

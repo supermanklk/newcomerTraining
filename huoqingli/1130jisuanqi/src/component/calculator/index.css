@@ -1,0 +1,62 @@
+/**
+ * @Description: 计算器页面的样式文件
+ * @author 霍青利
+ * @date 2020/11/30 15:10
+*/
+.container {
+  width: 360px;
+  height: 780px;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  font-size: 28px;
+}
+.container .calc-result {
+  height: 280px;
+  font-size: 48px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  padding-top: 100px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.container .calc-result .calc-result-item {
+  height: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container .input-active {
+  height: 500px;
+}
+.container .input-active .row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.container .input-active .row .row-item {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  background: #333333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container .input-active .row .row-item:hover {
+  transform: scale(0.99);
+}
+.container .input-active .row .row-item-num0 {
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 30px;
+  width: 168px;
+  border-radius: 38px;
+}
+.container .input-active .row .row-item-top {
+  background: #a5a5a5;
+}
+.container .input-active .row .row-item-right {
+  background: #fe9e09;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+html, body {
+    height: 100%;
+    background: rgb(240, 242, 245);
+}
+#root {
+    height: 100%;
+}
+#root > div {
+    height: 100%;
+}

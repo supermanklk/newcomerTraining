@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <h1>ToDoList</h1>
+        <ul :class="toDoList.length ? 'list-body' : ''">
+            <li 
+                :class="item.status ? 'del-line' : '' " 
+                v-for='(item, index) in toDoList' 
+                :key='index'>
+                <input v-model="item.status" type="checkbox" @click='compeleteTask(item)'> {{item.name}} 
+            </li>
+        </ul>
+        <p>已完成 {{finishTaskLenght}} 项 / 共 {{toDoList.length}} 项</p>
+        <input class="input-task" type="text" v-model='toDoItem' placeholder="请添加任务~" @keyup.13='addTask'>
+        <button @click="addTask">添加任务</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                toDoItem: '',
+                toDoList: []
+            },
+            computed: {
+                finishTaskLenght() {
+                    let len = 0;
+                    this.toDoList.forEach(item => {
+                        if (item.status) {
+                            len++
+                        }
+                    })
+                    return len
+                }
+            },
+            methods: {
+                addTask() {
+                    if (!this.toDoItem.trim()) return
+                    this.toDoList.unshift({ name: this.toDoItem, status: false })
+                    this.toDoItem = ''
+                },
+                compeleteTask(item) {
+                    item.status = !item.status
+                }   
+            }
+        })
+    </script>
+    
+</body>
+</html>

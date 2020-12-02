@@ -1,0 +1,111 @@
+/**
+ * @Description: 抽奖页面样式
+ * @author 霍青利
+ * @date 2020/12/1 14:35
+*/
+// 覆盖 marquee 的样式
+.marquee-text {
+    margin-right: 10px;
+}
+
+.container {
+    position: relative;
+    width: 480px;
+    height: 900px;
+    background: rgb(180, 112, 49);
+    color: #fff;
+    // 头部区域
+    .header {
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .luck-chance {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+    // 主体抽奖区域
+    .content {
+        width: 420px;
+        height: 420px;
+        padding: 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border: 5px solid rgb(175, 105, 34);
+        border-radius: 5px;
+
+        .content-luck-main {
+            position: relative;
+            display: flex;
+            flex-flow: wrap;
+            .active-luck-item {
+                transform: scale(1.1);
+            }
+            // 抽奖按钮区域
+            .luck-button {
+                background: rgb(254, 210, 130);
+                width: 120px;
+                height: 120px;
+                border: 5px solid rgb(254, 222, 139);
+                border-radius: 5px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: rgb(163, 101, 32);
+                cursor: pointer;
+                margin: 5px;
+                .click-Luck {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .consume-wishes {
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+    // 中奖展示区域
+    .luck-tips {
+        width: 420px;
+        height: 60px;
+        box-sizing: border-box;
+        border: 5px solid rgb(175, 105, 34);
+        background: rgb(183, 113, 41);
+        border-radius: 5px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        color: #fafafa;
+        // 左侧图标
+        .tips-left {
+            flex: 1;
+            img {
+                width: 30px;
+                vertical-align: middle;
+                margin: 10px;
+            }
+        }
+        // 右侧文本展示区域
+        .tips-right{
+            flex: 6;
+            text-align: right;
+            margin-right: 20px;
+            overflow: hidden;
+        }
+
+    }
+    // 中奖记录
+    .luck-record {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}

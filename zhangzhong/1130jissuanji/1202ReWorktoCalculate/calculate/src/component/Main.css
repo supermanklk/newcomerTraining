@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.boox {
+    width: 376px;
+    height: 780px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.show {
+    height: 250px;
+    width: 376px;
+    position: relative;
+
+}
+
+.show h1 {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.show h1 span {
+    font-size: 70px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.ulbox {
+    width: 376px;
+    height: 530px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.ulbox li {
+    width: 87px;
+    height: 87px;
+    flex-grow: 1;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 2px;
+    line-height: 87px;
+}
+
+.ulbox .two {
+    flex-grow: 2;
+    width: 176px;
+    border-radius: 43px;
+}
+
+.ulbox li p {
+    color: white;
+    font-size: 50px;
+}
+
+.Number {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+}
+
+.fun {
+    background-color: orange;
+}
+
+.funF {
+    background-color: #eeeeee;
+
+}
+
+.ulbox .funF p {
+    color: #000000;
+}

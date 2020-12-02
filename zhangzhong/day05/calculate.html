@@ -1,0 +1,258 @@
+<!---->
+<!--* @Description:计算器.html-->
+<!--* @author zhangzhong-->
+<!--* @date 2020/11/30-->
+<!--*/  -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .boox {
+        width: 376px;
+        height: 780px;
+        background-color: black;
+        margin: 0 auto;
+    }
+
+    .show {
+        height: 250px;
+        width: 376px;
+        position: relative;
+
+    }
+
+    .show h1{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .show h1 span{
+        font-size: 70px;
+        color: #fff;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+
+    .ulbox {
+        width: 376px;
+        height: 530px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .ulbox li {
+        width: 87px;
+        height: 87px;
+        flex-grow: 1;
+        border-radius: 50%;
+        text-align: center;
+        margin-left: 2px;
+        line-height: 87px;
+    }
+
+    .ulbox .two {
+        flex-grow: 2;
+        width: 176px;
+        border-radius: 43px;
+    }
+
+    .ulbox li p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .Number {
+        background-color: rgb(51, 51, 51);
+        color: #fff;
+    }
+
+    .fun {
+        background-color: orange;
+    }
+
+    .funF {
+        background-color: #eeeeee;
+
+    }
+
+    .ulbox .funF p {
+        color: #000000;
+    }
+
+
+</style>
+<div id="root"></div>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+    class Main extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {
+                pointflag: true,
+                operationflag:false,
+                subflag:0,
+                str:[],
+                num:0
+            }
+            this.setNum = this.setNum.bind(this)
+            this.Fun = this.Fun.bind(this)
+        }
+        //取到输入的值，将它push到str数组中
+        setNum(val){
+            this.state.str.push(val)
+            this.setState({
+                num:this.state.str.join(""),
+                operationflag:true,
+                subflag:0
+            })
+            console.log( this.state.str)
+        }
+        //取到输入的点
+        Point(val){
+            if(this.state.pointflag){
+                this.state.str.push(val)
+                this.setState({
+                    num:this.state.str.join(""),
+                    pointflag:false
+                })
+            }
+        }
+        //清除数据
+        clearNum(){
+            this.setState({
+                str: [],
+                num:0,
+                pointflag: true,
+                operationflag:false,
+            })
+        }
+        //获取输入的计算方法，push到str中
+        Fun(val){
+            if(this.state.operationflag||val==="-"){
+                if(val==="-"){
+                    this.setState({
+                        subflag:1
+                    })
+                }
+                if (this.state.subflag===0){
+                    this.state.str.push(val)
+                    this.setState({
+                        num:this.state.str.join(""),
+                        pointflag:true,
+                        operationflag:false
+                    })
+                }
+
+            }
+
+        }
+        //通过eval去计算处理得到的表达式
+        calculate(){
+            let res = eval(this.state.str.join(""))
+            this.setState({
+                num:res
+            })
+        }
+
+        render(){
+            return (
+                <div className="boox">
+                    <div className="show">
+                        <h1>
+	                        <span>
+		                        {this.state.num}
+	                        </span>
+
+                        </h1>
+                    </div>
+                    <div className="button">
+                        <ul className="ulbox">
+                            <li className="funF" onClick={() => this.clearNum()}>
+                                <p>AC</p>
+                            </li>
+                            <li className="funF">
+                                <p>+/-</p>
+                            </li>
+                            <li className="funF" >
+                                <p>%</p>
+                            </li>
+                            <li className="fun" onClick={() => this.Fun("/")}>
+                                <p>÷</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(7)}>
+                                <p>7</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(8)}>
+                                <p>8</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(9)}>
+                                <p>9</p>
+                            </li>
+                            <li className="fun" onClick={() => this.Fun("*")}>
+                                <p>×</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(4)}>
+                                <p>4</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(5)}>
+                                <p>5</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(6)}>
+                                <p>6</p>
+                            </li>
+                            <li className="fun" onClick={() => this.Fun("-")}>
+                                <p>-</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(1)}>
+                                <p>1</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(2)}>
+                                <p>2</p>
+                            </li>
+                            <li className="Number" onClick={() => this.setNum(3)}>
+                                <p>3</p>
+                            </li>
+                            <li className="fun" onClick={() => this.Fun("+")}>
+                                <p>+</p>
+                            </li>
+                            <li className="Number two" onClick={() => this.setNum(0)}>
+                                <p>0</p>
+                            </li>
+                            <li className="Number" onClick={() => this.Point('.')}>
+                                <p>.</p>
+                            </li>
+                            <li className="fun" onClick={() => this.calculate()}>
+                                <p>=</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<Main/>,document.getElementById('root'))
+</script>
+</body>
+</html>

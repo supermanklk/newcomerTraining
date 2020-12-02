@@ -1,0 +1,69 @@
+/**
+ * @Description: Msg.css
+ * @author zhangzhong
+ * @date 2020/12/1 
+*/
+.msg {
+    width: 420px;
+    height: 74px;
+    padding: 20px;
+    margin: 40px -20px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #b77129;
+    border: 5px solid #ac6620;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #ae6923;
+
+}
+
+.msg img {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 auto;
+}
+
+.msg .msg-text {
+
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+.msg .msg-text .msg-scroll {
+    width: 800px;
+    padding-left: 200px;
+    white-space: nowrap;
+    animation: 10s wordsLoop linear infinite normal;
+}
+
+.msg .msg-text .msg-scroll .scroll {
+    color: #fff1d3;
+    font-size: 17px;
+    font-weight: 530;
+    text-align: right;
+    margin-left: 20px;
+
+}
+
+@keyframes wordsLoop {
+    0% {
+        transform: translateX(200px);
+        -webkit-transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform: translateX(200px);
+        -webkit-transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+    }
+}
+

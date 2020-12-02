@@ -1,0 +1,35 @@
+/**
+ * @Description: App.css
+ * @author zhangzhong
+ * @date 2020/12/1 
+*/
+.app{
+    width: 450px;
+    height: 100%;
+    background-color:#b47031;
+    margin: 0 auto;
+    position: relative;
+}
+.app-header{
+    width: 450px;
+    height: 150px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.app-header .rest-draw,.app-header .rest{
+    margin: 20px;
+    text-align: center;
+    display: block;
+}
+.app-header .rest-draw{
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #fdfdf8;
+}
+.app-header .rest{
+    font-size: 16px;
+    color: #f9dec5;
+}
+
+

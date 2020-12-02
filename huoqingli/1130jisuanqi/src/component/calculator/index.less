@@ -1,0 +1,62 @@
+/**
+ * @Description: 计算器页面的样式文件
+ * @author 霍青利
+ * @date 2020/11/30 15:10
+*/
+.container {
+    width: 360px;
+    height: 780px;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    font-size: 28px;
+    .calc-result {
+        height: 280px;
+        font-size: 48px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+        //direction: rtl;
+        padding-top: 100px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        .calc-result-item {
+            height: 60px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    .input-active {
+        height: 500px;
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            .row-item {
+                width: 75px;
+                height: 75px;
+                line-height: 75px;
+                text-align: center;
+                background: rgb(51, 51, 51);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .row-item:hover {
+                transform: scale(.99);
+            }
+            .row-item-num0 {
+                text-align: left;
+                box-sizing: border-box;
+                padding-left: 30px;
+                width: 168px;
+                border-radius: 38px;
+            }
+            .row-item-top {
+                background: rgb(165, 165, 165);
+            }
+            .row-item-right {
+                background: rgb(254, 158, 9);
+            }
+        }
+    }
+}

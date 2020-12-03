@@ -117,7 +117,7 @@ class Plate extends Component{
         this.clearDate()
         let timer1 = setInterval(() => {
             this.handleDirectionshift(lottery);
-            //
+            //根据他的定位，判断它的定位到各个临界条件，去控制它的left和top
             if (this.state.number1 < 255 && this.state.number2 === 0){
                 this.setState({
                     number1: this.state.number1+125
@@ -139,6 +139,7 @@ class Plate extends Component{
                 time: this.state.time+20
             })
 
+            //让他跑个几圈之后，然后判断500ms之后定位到对应奖品的位置
             if (this.state.time > 500 && this.state.number1 === this.state.left && this.state.number2 === this.state.top){
                 clearInterval(timer1);
             }

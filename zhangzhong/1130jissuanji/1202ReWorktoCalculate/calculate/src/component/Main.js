@@ -1,10 +1,15 @@
-import React, {Component} from "react";
+/**
+ * @Description: Main.js
+ * @author zhangzhong
+ * @date 2020/12/3 
+*/
+import React,{Component} from "react";
 import './Main.css'
-let math = require('mathjs');
+import math from '../math.js'
 
 
-class Main extends Component {
-    constructor(props) {
+class Main extends Component{
+    constructor(props){
         super(props);
         this.state = {
             pointFlag: true,
@@ -18,8 +23,13 @@ class Main extends Component {
         this.Point = this.Point.bind(this)
     }
 
-    //取到输入的值，将它push到str数组中
-    setNum(val) {
+
+    /**
+    *@FunctionDes:取到输入的值，将它push到str数组中
+    *@Time:2020/12/3
+    *
+    */
+    setNum(val){
         this.state.str.push(val)
         this.setState({
             num: this.state.str.join(""),
@@ -28,9 +38,14 @@ class Main extends Component {
         })
     }
 
-    //取到输入的点
-    Point(val) {
-        if (this.state.pointflag) {
+
+    /** //取到输入的点,push到str中.判断 ”.“ 时候输入合理，用pointFlag标记它是否合理
+    *@FunctionDes:
+    *@Time:2020/12/3
+    *
+    */
+    Point(val){
+        if (this.state.pointFlag){
             this.state.str.push(val)
             this.setState({
                 num: this.state.str.join(""),
@@ -39,8 +54,12 @@ class Main extends Component {
         }
     }
 
-    //清除数据
-    clearNum() {
+    /**
+    *@FunctionDes://点击 “AC按钮” 来清除显示的数据
+    *@Time:2020/12/3
+    *
+    */
+    clearNum(){
         this.setState({
             str: [],
             num: 0,
@@ -49,15 +68,21 @@ class Main extends Component {
         })
     }
 
-    //获取输入的计算方法，push到str中
-    Fun(val) {
-        if (this.state.operationFlag || val === "-") {
-            if (val === "-") {
+
+
+    /**
+    *@FunctionDes://获取输入的计算方法，push到str中.判断 ”-“ 的次数来用subFlag标记它是否合理
+    *@Time:2020/12/3
+    *
+    */
+    Fun(val){
+        if (this.state.operationFlag || val === "-"){
+            if (val === "-"){
                 this.setState({
                     subFlag: 1
                 })
             }
-            if (this.state.subFlag === 0) {
+            if (this.state.subFlag === 0){
                 this.state.str.push(val)
                 this.setState({
                     num: this.state.str.join(""),
@@ -70,27 +95,31 @@ class Main extends Component {
 
     }
 
-    //通过eval去计算处理得到的表达式
-    calculate() {
-        let res = math.parser().eval(this.state.str.join(""))
+
+    /**
+     *@FunctionDes:通过Mathjs库的evalevaluate去计算处理得到的表达式，再通过math.format将结果改成string类型显示结果
+     *@Time:2020/12/3
+     *
+     */
+    calculate(){
+        let res = math.format(math.evaluate(this.state.str.join("")));
         this.setState({
             num: res
         })
     }
 
-    render() {
+    render(){
         return (
-            <div className="boox">
+            <div className="box">
                 <div className="show">
                     <h1>
 	                        <span>
 		                        {this.state.num}
 	                        </span>
-
                     </h1>
                 </div>
                 <div className="button">
-                    <ul className="ulbox">
+                    <ul className="ul-box">
                         <li className="funF" onClick={() => this.clearNum()}>
                             <p>AC</p>
                         </li>

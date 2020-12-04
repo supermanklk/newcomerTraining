@@ -1,0 +1,35 @@
+/**
+ * @Description: 三个小组件的公共样式
+ * @author 霍青利
+ * @date 2020/12/4 16:20
+*/
+.content {
+  width: 98px;
+  height: 98px;
+  background: #fafafa;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content .center span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.content .bottom {
+  width: 48px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+  background: #fc3b2f;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.content .bottom:active {
+  background: #fc692f;
+}
+/*# sourceMappingURL=index.css.map */

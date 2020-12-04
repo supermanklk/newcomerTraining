@@ -1,0 +1,38 @@
+/**
+ * @Description: Right.css
+ * @author zhangzhong
+ * @date 2020/12/4 
+*/
+.right{
+    width: 100px;
+    height: 100px;
+    background-color: #fafafa;
+    text-align: center;
+}
+.right p{
+    margin: 8px;
+}
+.header-text{
+    font-size: 12px;
+}
+.price{
+    font-size:15px;
+    font-weight: 600;
+}
+.price span{
+    font-size: 10px;
+    font-weight: 100;
+}
+.right button{
+    width: 50px;
+    height: 27px;
+    background-color:#fb3c32;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #eee;
+    transition: all 0.3s;
+    outline: none;
+}
+.right button:active{
+    transform: scale(1.1,1.1);
+}

@@ -1,0 +1,44 @@
+/**
+ * @Description: Mid.css
+ * @author zhangzhong
+ * @date 2020/12/4 
+*/
+.mid {
+    width: 100px;
+    height: 100px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.mid p {
+    margin: 8px;
+}
+
+.header-text {
+    font-size: 12px;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.price span {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.mid button {
+    width: 50px;
+    height: 27px;
+    background-color: #fb3c32;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #eee;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.mid button:active {
+    transform: scale(1.1, 1.1);
+}

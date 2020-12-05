@@ -1,5 +1,5 @@
-export function add(){
+export function add() {
     return {
-        type:"add"
+        type: "add"
     }
 }

@@ -1,3 +1,8 @@
+/**
+ * @Description: 
+ * @author luhao
+ * @date 2020/12/4 
+*/
 const iniitalState = { // 定义state的状态
     num:1,
     text:['111','22','333']

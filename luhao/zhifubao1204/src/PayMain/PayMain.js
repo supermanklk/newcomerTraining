@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+/**
+ * @Description:
+ * @author LuHao
+ * @date 2020/12/4
+ */
+import React, {Component} from 'react';
 import './PayMain.css'
-import ChildA from './ChildA/ChildA'
+import ChildA from './ChildA/ChildA'        //导入组件A,B,C
 import ChildB from './ChildB/ChildB'
 import ChildC from './ChildC/ChildC'
+
 export class PayMain extends Component {
     render() {
         return (
@@ -42,9 +48,9 @@ export class PayMain extends Component {
                         <div>| &nbsp;以下奖励任选一个</div>
                     </div>
                     <div className='child'>
-                        <ChildA />
-                        <ChildB />
-                        <ChildC />
+                        <ChildA/>
+                        <ChildB/>
+                        <ChildC/>
                     </div>
                 </div>
                 <div className="button">
@@ -57,4 +63,5 @@ export class PayMain extends Component {
         )
     }
 }
-export default  PayMain
+
+export default PayMain

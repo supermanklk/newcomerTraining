@@ -1,5 +1,5 @@
-export function addC(){
+export function addC() {
     return {
-        type:"addC"
+        type: "addC"
     }
 }

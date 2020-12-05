@@ -4,15 +4,16 @@ import './index.css';
 import App from './App';
 import PayMain from './PayMain/PayMain'
 import reportWebVitals from './reportWebVitals';
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import store from "./Redux/index";
+
 ReactDOM.render(
     <Provider store={store}>
-  <React.StrictMode>
-    <PayMain />
-  </React.StrictMode>
+        <React.StrictMode>
+            <PayMain/>
+        </React.StrictMode>
     </Provider>,
-  document.getElementById('root')
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

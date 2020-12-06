@@ -3,6 +3,11 @@
  * @author 霍青利
  * @date 2020/11/30 15:10
 */
+* {
+    // 去除用户双击文本后的蓝色背景
+    user-select: none;
+}
+
 .container {
     width: 360px;
     height: 780px;
@@ -13,17 +18,14 @@
     .calc-result {
         height: 280px;
         font-size: 48px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #fff;
-        //direction: rtl;
         padding-top: 100px;
         padding-right: 10px;
         box-sizing: border-box;
         .calc-result-item {
-            height: 60px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            margin-top: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: right;
         }
     }
     .input-active {
@@ -32,6 +34,7 @@
             display: flex;
             justify-content: space-evenly;
             margin-bottom: 20px;
+
             .row-item {
                 width: 75px;
                 height: 75px;
@@ -41,8 +44,9 @@
                 border-radius: 50%;
                 cursor: pointer;
             }
-            .row-item:hover {
+            .row-item:active {
                 transform: scale(.99);
+                background: #111;
             }
             .row-item-num0 {
                 text-align: left;
@@ -53,10 +57,27 @@
             }
             .row-item-top {
                 background: rgb(165, 165, 165);
+                color: #000;
             }
             .row-item-right {
                 background: rgb(254, 158, 9);
             }
+            .row-item-plus-minus {
+                position: relative;
+                .plus {
+                    position: absolute;
+                    top: -5px;
+                    left: 16px;
+                    font-style:normal
+                }
+                .minus {
+                    position: absolute;
+                    top: 5px;
+                    left: 40px;
+                    font-style:normal
+                }
+            }
+
         }
     }
 }

@@ -3,6 +3,9 @@
  * @author 霍青利
  * @date 2020/11/30 15:10
 */
+* {
+  user-select: none;
+}
 .container {
   width: 360px;
   height: 780px;
@@ -14,17 +17,15 @@
 .container .calc-result {
   height: 280px;
   font-size: 48px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #fff;
   padding-top: 100px;
   padding-right: 10px;
   box-sizing: border-box;
 }
 .container .calc-result .calc-result-item {
-  height: 60px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  margin-top: 100px;
+  height: 80px;
+  line-height: 80px;
+  text-align: right;
 }
 .container .input-active {
   height: 500px;
@@ -43,8 +44,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.container .input-active .row .row-item:hover {
+.container .input-active .row .row-item:active {
   transform: scale(0.99);
+  background: #111;
 }
 .container .input-active .row .row-item-num0 {
   text-align: left;
@@ -55,8 +57,24 @@
 }
 .container .input-active .row .row-item-top {
   background: #a5a5a5;
+  color: #000;
 }
 .container .input-active .row .row-item-right {
   background: #fe9e09;
+}
+.container .input-active .row .row-item-plus-minus {
+  position: relative;
+}
+.container .input-active .row .row-item-plus-minus .plus {
+  position: absolute;
+  top: -5px;
+  left: 16px;
+  font-style: normal;
+}
+.container .input-active .row .row-item-plus-minus .minus {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  font-style: normal;
 }
 /*# sourceMappingURL=index.css.map */

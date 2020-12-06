@@ -1,0 +1,96 @@
+/**
+ * @Description: Main.css
+ * @author zhangzhong
+ * @date 2020/12/3 
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 356px;
+    height: 780px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.show {
+    height: 250px;
+    width: 356px;
+    position: relative;
+
+}
+
+.show h1 {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.show h1 span {
+    font-size: 70px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.ul-box {
+    width: 356px;
+    height: 530px;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.ul-box li {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 2px;
+    line-height: 72px;
+    transition: all 0.4s;
+
+}
+.ul-box li:active{
+   transform:  scale(1.2,1.2)
+}
+
+.ul-box .two {
+    padding: 0 28px;
+    text-align: left;
+    width: 156px;
+    border-radius: 43px;
+    box-sizing: border-box;
+    line-height: 72px;
+}
+
+.ul-box li p {
+    color: white;
+    font-size: 36px;
+}
+
+.Number {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+}
+
+.fun {
+    background-color: orange;
+}
+
+.funF {
+    background-color: #a5a5a5;
+
+}
+
+.ul-box .funF p {
+    color: #000000;
+}

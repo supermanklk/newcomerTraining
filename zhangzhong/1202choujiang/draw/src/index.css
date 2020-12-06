@@ -1,0 +1,14 @@
+/**
+ * @Description: index.css
+ * @author zhangzhong
+ * @date 2020/12/1 
+*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body,#root{
+    height: 100%;
+
+}

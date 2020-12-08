@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "消息",
-  "navigationBarTextStyle": "white",
-  "usingComponents": {
-    "head-view": "/components/HeadView"
-  }
-}

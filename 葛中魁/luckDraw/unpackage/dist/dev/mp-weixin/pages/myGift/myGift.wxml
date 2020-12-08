@@ -1,1 +1,0 @@
-<view class="gift-content data-v-6d50af6e"><view class="content-box data-v-6d50af6e"><view class="titled data-v-6d50af6e">我的奖品</view><block wx:for="{{objList}}" wx:for-item="item" wx:for-index="index"><view class="gift-item data-v-6d50af6e">{{index+1+"."+item}}</view></block></view></view>

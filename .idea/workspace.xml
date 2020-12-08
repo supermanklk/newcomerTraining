@@ -20,7 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e073d048-8edf-49f8-b3b7-ff81e4411e8a" name="默认的" comment="luhaotodolist">
-      <change beforePath="$PROJECT_DIR$/luhao/ChangePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/luhao/ChangePassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/component/Main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/component/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhangzhong/1130jissuanji/1202ReWorktoCalculate/calculate/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhangzhong/1202choujiang/draw/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/zhangzhong/1202choujiang/draw/.eslintcache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +48,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -61,14 +76,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\newcomerTraining\zhangzhong\1130jissuanji\1202ReWorktoCalculate\calculate\src\component" />
+      <recent name="D:\LH\GitHub\newcomerTraining\luhao" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\LH\GitHub\newcomerTraining\葛中魁\luhao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\LH\GitHub\newcomerTraining\luhao" />
-    </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e073d048-8edf-49f8-b3b7-ff81e4411e8a" name="默认的" comment="" />
@@ -84,11 +103,15 @@
       <workItem from="1606355470898" duration="810000" />
       <workItem from="1606365058304" duration="1471000" />
       <workItem from="1606441717393" duration="32938000" />
+      <workItem from="1606923493821" duration="1033000" />
+      <workItem from="1606924548778" duration="191000" />
+      <workItem from="1606924782592" duration="9000" />
+      <workItem from="1606924817698" duration="2426000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -107,6 +130,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="496" y="353" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606355608392" />
+    <state x="720" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606924704153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606924704153" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606925010321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606925010321" />
     <state x="900" y="352" key="FileChooserDialogImpl" timestamp="1606371483741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

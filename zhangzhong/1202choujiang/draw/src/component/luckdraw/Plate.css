@@ -1,0 +1,120 @@
+/**
+ * @Description: Plate.css
+ * @author zhangzhong
+ * @date 2020/12/1 
+*/
+.plate{
+    width: 420px;
+    height: 390px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 5px solid #ac6620;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #ac6620;
+
+}
+.plate ul{
+    width: 380px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.plate ul li{
+    width: 120px;
+    height: 110px;
+    text-align: center;
+    background-color: #ffde8d;
+    border-radius: 5%;
+
+}
+.plate ul #Lid{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 120px;
+    height: 110px;
+    display:none;
+    background: slategray;
+    opacity: .7;
+}
+.plate ul li img{
+     width:100%;
+     height:70px
+ }
+
+.plate ul li .box{
+    width: 100px;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: #fef1d1;
+}
+.plate ul li .box img{
+    width: 100px;
+    height: 70px
+}
+
+.box-but{
+    margin: 8px auto;
+    padding: 5px;
+    background-color: rgb(255, 220, 139);
+    width: 100px;
+    height: 95px;
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid #eac471;
+    box-sizing: border-box;
+}
+.box-but:active{
+    margin: 8px auto;
+    padding: 5px;
+    background-color: mediumvioletred;
+    width: 100px;
+    height: 95px;
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid mediumvioletred;
+    box-sizing: border-box;
+    opacity: 0.5;
+
+
+}
+
+.box-but:hover{
+    cursor:pointer
+}
+
+.box-but .box-text{
+    margin-top: 5px;
+    color: #b67229;
+    font-size: 19px
+}
+.box-but span{
+    color: #bd833d;
+    font-size: 10px
+}
+.box-text{
+    font-weight: 600;
+    font-size: 13px;
+    color:  #b48954;
+}
+.bottom{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #eeeeee;
+}
+.bottom p:active{
+    color: red;
+}
+.bottom p:hover{
+    cursor:pointer
+
+}
+
+

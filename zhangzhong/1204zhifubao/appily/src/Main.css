@@ -1,0 +1,178 @@
+
+/**
+ * @Description: Main.css
+ * @author zhangzhong
+ * @date 2020/12/4
+*/
+.main{
+    width: 380px;
+    height: 850px;
+    margin: 0 auto;
+    background-color:  #f5f5f5;
+    position: relative;
+}
+.header{
+    width: 380px;
+    height: 300px;
+    background-color: #1676fe;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px
+}
+.header-box{
+    padding: 10px 7px 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.msg{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+
+}
+.msg .signal img{
+    height: 18px;
+}
+.msg .text {
+    line-height: 30px;
+    font-size: 12px;
+}
+.msg .electricity img{
+    height: 26px;
+}
+.content{
+    width: 380px;
+}
+.content-header{
+    padding: 20px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.content-header .img{
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+
+}
+.content-header .img img{
+    width: 23px;
+}
+.content-header p {
+    font-size: 14px;
+    color: #dbfeff;
+    letter-spacing: 2px;
+    margin: 8px;
+}
+.content-header h1{
+    font-size: 36px;
+    font-weight: 545;
+}
+.content-header h1 span{
+    font-size: 30px;
+}
+.content-header .button{
+    position: absolute;
+    right: 15px;
+    font-size: 14px;
+    top: 0;
+}
+.content-bottom{
+    width: 380px;
+
+}
+.content-bottom-text {
+    color: #fff;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+.item{
+    font-weight: 500;
+    font-size: 15px;
+}
+.item-bottom{
+    font-size: 12px;
+}
+.plate{
+    width: 340px;
+    height: 183px;
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    top: 250px;
+    border-radius: 10px;
+}
+.plate .nav{
+    width: 340px;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+.plate .nav p{
+    color: #001529;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline;
+    letter-spacing: 1px;
+}
+.plate .nav  span{
+    color: #969696;
+    font-size: 13px;
+    margin-left: 8px;
+
+}
+.plate .plate-button{
+    width:340px;
+    height: 140px;
+    display:flex;
+    justify-content: space-evenly;
+}
+.footer{
+    width: 380px;
+    height: 86px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+}
+.footer .button{
+    width: 114px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid #1676fe;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s;
+}
+.footer .button:active{
+    transform: scale(1.1,1.1);
+}
+.withe{
+    background-color: white;
+    color: #1676fe;
+}
+.blue{
+    background-color: #1676fe;
+    color: #fff;
+}
+
+

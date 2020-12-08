@@ -4,7 +4,6 @@
  * @LastEditTime: 2020-11-27 19:33:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \张仲的本地库\newcomerTraining\zhangzhong\day04\aiyongui\src\App.vue
 -->
 <template>
   <div id="app">

@@ -1,0 +1,60 @@
+/**
+ * @Description: header 头部状态栏和搜索框的组件
+ * @author 霍青利
+ * @date 2020/12/8 17:18
+*/
+
+header {
+    height: 80px;
+    box-sizing: border-box;
+    // 头部状态栏
+    .status-tab {
+        line-height: 20px;
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        .status-tab-right {
+            img {
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    // 搜索框部分
+    .search {
+        position: relative;
+        height: 50px;
+        padding: 0 10px 0 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 24px;
+            height: 24px;
+            vertical-align: center;
+        }
+        .search-icon {
+            position: absolute;
+            left: 58px;
+            top: 14px;
+
+        }
+        .search-input {
+            flex: 1;
+            margin: 0 20px 0 15px;
+            height: 30px;
+            outline: none;
+            border: none;
+            border-radius: 15px;
+            padding: 0 40px;
+            background: #fafafa;
+        }
+        .search-camera {
+            position: absolute;
+            top: 13px;
+            right: 60px;
+        }
+
+    }
+}

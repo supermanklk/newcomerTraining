@@ -1,0 +1,120 @@
+/**
+ * @Description: 支付页父组件的样式文件
+ * @author 霍青利
+ * @date 2020/12/4 15:22
+*/
+.container {
+  position: relative;
+  width: 360px;
+  height: 800px;
+  background: #f5f5f5;
+  margin: 50px;
+}
+.container .pay-info {
+  height: 300px;
+  background: #1676fe;
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  font-size: 16px;
+}
+.container .pay-info .default-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.container .pay-info .default-info .electric-info {
+  display: flex;
+}
+.container .pay-info .default-info .electric-info img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.container .pay-info .default-info .electric-info span {
+  margin: 0 5px;
+}
+.container .pay-info .pay-info-detail {
+  position: relative;
+  text-align: center;
+}
+.container .pay-info .pay-info-detail .pay-success img {
+  width: 50px;
+  height: 50px;
+}
+.container .pay-info .pay-info-detail .pay-success .pay-price {
+  font-size: 36px;
+}
+.container .pay-info .pay-info-detail .pay-success .pay-price span {
+  font-size: 28px;
+}
+.container .pay-info .pay-info-detail .pay-success .complete {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.container .pay-info .pay-info-detail .detail-text {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.container .pay-info .pay-info-detail .detail-text .detail-text-title {
+  text-align: left;
+}
+.container .pay-info .pay-info-detail .detail-text .detail-text-content {
+  text-align: right;
+}
+.container .pay-award {
+  width: 320px;
+  height: 150px;
+  background: #ffffff;
+  margin: -60px auto;
+  border-radius: 10px;
+}
+.container .pay-award .pay-award-title {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 10px;
+  line-height: 16px;
+}
+.container .pay-award .pay-award-title .pay-award-title-tips {
+  font-weight: 400;
+  font-size: 14px;
+  color: #cacaca;
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #cacaca;
+}
+.container .pay-award .components {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .footer {
+  position: absolute;
+  bottom: 0;
+  width: 360px;
+  height: 58px;
+  background: #fff;
+  padding-top: 20px;
+  box-sizing: border-box;
+  border-top: 1px solid #ededed;
+  text-align: right;
+}
+.container .footer .bottom-btn {
+  width: 100px;
+  height: 25px;
+  margin-right: 20px;
+  outline: none;
+  color: #fff;
+  background: #1676fe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .footer .assess-btn {
+  background: #fff;
+  border: 1px solid #1676fe;
+  color: #1676fe;
+}
+/*# sourceMappingURL=index.css.map */

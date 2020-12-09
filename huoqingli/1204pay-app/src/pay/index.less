@@ -1,0 +1,128 @@
+/**
+ * @Description: 支付页父组件的样式文件
+ * @author 霍青利
+ * @date 2020/12/4 15:22
+*/
+.container {
+    position: relative;
+    width: 360px;
+    height: 800px;
+    background: rgb(245, 245, 245);
+    margin: 50px;
+    // 付款信息
+    .pay-info {
+        height: 300px;
+        background: rgb(22, 118, 254);
+        border-radius: 0 0 20px 20px;
+        color: #fff;
+        font-size: 16px;
+        .default-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            .electric-info {
+                display: flex;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+                span {
+                    margin: 0 5px;
+                }
+
+            }
+        }
+        .pay-info-detail {
+            position: relative;
+            text-align: center;
+            .pay-success {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    //vertical-align: middle;
+                }
+                .pay-price {
+                    font-size: 36px;
+                    span {
+                        font-size: 28px;
+                    }
+                }
+                .complete {
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                }
+            }
+            .detail-text {
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                .detail-text-title {
+                    text-align: left;
+                }
+                .detail-text-content {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    // 付款奖励
+    .pay-award {
+        width: 320px;
+        height: 150px;
+        background: rgb(255, 255, 255);
+        margin: -60px auto;
+        border-radius: 10px;
+        .pay-award-title {
+            display: flex;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 10px;
+            line-height: 16px;
+            .pay-award-title-tips {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgb(202, 202, 202);
+                margin-left: 5px;
+                padding-left: 5px;
+                border-left: 1px solid rgb(202, 202, 202);
+            }
+        }
+        .components {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    // 底部按钮区域
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 360px;
+        height: 58px;
+        background: #fff;
+        padding-top: 20px;
+        box-sizing: border-box;
+        border-top: 1px solid rgb(237, 237, 237);
+        text-align: right;
+        .bottom-btn {
+            width: 100px;
+            height: 25px;
+            margin-right: 20px;
+            outline: none;
+            color: #fff;
+            background: #1676fe;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .assess-btn {
+            background: #fff;
+            border: 1px solid #1676fe;
+            color: #1676fe;
+        }
+    }
+}

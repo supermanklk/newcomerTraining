@@ -1,0 +1,207 @@
+/**
+ * @Description: index.css
+ * @author zhangzhong
+ * @date 2020/12/9 
+*/
+
+
+/*
+* 导入Ant Design 样式
+*/
+@import '~antd/dist/antd.css';
+
+.main {
+    width: 380px;
+    height: 850px;
+    margin: 0 auto;
+    border: 2px solid #eee;
+    background-color: #fff;
+}
+
+.header {
+    width: 380px;
+}
+
+.header-msg {
+    width: 380px;
+    height: 38px;
+    padding: 10px 20px 10px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-msg .time {
+    width: 50px;
+    height: 18px;
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.header-msg .phone-msg {
+    width: 80px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-msg .phone-msg p {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 2px;
+}
+
+.header-msg .phone-msg .img-signal {
+    width: 21px;
+}
+
+.header-msg .phone-msg .img-phone {
+    width: 25px;
+}
+
+.header-search {
+    width: 380px;
+    height: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-search .return {
+    flex: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.header-search .input {
+    flex: 1;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    margin: 0 7px;
+}
+
+.header-search .input .input-box {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-search .input .input-box .search {
+    flex: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+.header-search .input .input-box .name {
+    flex: 1;
+    height: 24px;
+    padding: 2px 10px;
+    box-sizing: border-box;
+    background-color: #808080;
+    border-radius: 12px;
+    color: #eeeeee;
+    font-size: 10px;
+}
+
+.header-search .input .camera {
+    width: 24px;
+    height: 24px;
+}
+
+.header-search .more {
+    flex: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.nav{
+    margin-bottom: 20px;
+}
+
+
+.nav .nav-type {
+    width: 380px;
+    padding: 20px 40px 10px 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .nav-type .comprehensive {
+    font-weight: 600;
+    line-height: 2px;
+}
+
+.nav .nav-type p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav-label{
+    width: 380px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-label .nav-label-box{
+    height: 30px;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-label .nav-label-box div{
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.nav-label .nav-label-box .logistics{
+    width: 70px;
+    height: 30px;
+}
+
+.nav-label .nav-label-box .sales{
+    width: 60px;
+    height: 30px;
+
+}
+
+.nav-label .nav-label-box .price{
+    width: 100px;
+    height: 30px;
+
+}
+
+
+
+.nav-label .screening{
+    width: 52px;
+    height:30px;
+    line-height: 30px;
+    flex: 0 0 auto;
+}
+
+.goods-list{
+    overflow-y:scroll;
+    overflow-x: hidden;
+    height:640px;
+}
+
+

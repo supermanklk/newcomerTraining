@@ -1,3 +1,8 @@
+<!--
+  auther: 皮新雷
+  day: 2020-12-8
+  description: 这是一个todolist
+ -->
 <template>
   <div class="page">
     <div class="title">
@@ -24,7 +29,7 @@
         <div class="taskTitle"><B>Task</B></div>
         <div class="myinput">
           <van-field
-            v-model="value1"
+            v-model="addval"
             label=""
             placeholder="你想做点什么"
           />
@@ -46,7 +51,7 @@ export default {
         {checkbox: false,value: '打豆豆'}
       ],
       checkboxGroup: [],
-      value1: ''// input框中的值
+      addval: ''// input框中的值
     }
   },
   computed: {
@@ -62,11 +67,11 @@ export default {
   },
   methods: {
     addToList(){      // 点击按钮，将input的value添加到myList中
-      if (this.value1.trim()){
+      if (this.addval.trim()){
         this.myList.push(
-          {checkbox: false,value: this.value1}
+          {checkbox: false,value: this.addval}
         )
-        this.value1 = ""
+        this.addval = ""
       }
     }
   }

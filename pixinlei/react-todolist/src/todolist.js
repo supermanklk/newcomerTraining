@@ -15,9 +15,17 @@ class Todolist extends Component{
                 {checkbox: false,value: '睡觉'},
                 {checkbox: false,value: '打豆豆'}
             ],
-            inputVal: null
+            inputVal: "" // input框中的内容
         }
     }
+
+    componentWillMount(){
+    }
+
+    componentDidMount(){
+    }
+
+
     // 渲染myList列表的数据
     renderList() {
         return (
@@ -86,9 +94,9 @@ class Todolist extends Component{
                 {/* input框和按钮部分   */}
                 <div className="bottom">
                     <div className="task">
-                        <div className="taskTitle"><h4>Task</h4></div>
-                        <div className="myinput">
-                            <input type="text" placeholder="你想做点什么" onChange={this.addToList.bind(this)}/>
+                        <div className="task-title"><h4>Task</h4></div>
+                        <div className="my-input">
+                            <input value={this.state.inputVal} type="text" placeholder="你想做点什么" onChange={this.addToList.bind(this)}/>
                         </div>
                     </div>
                     <button onClick={this.buttonToList.bind(this)}>Save task</button>

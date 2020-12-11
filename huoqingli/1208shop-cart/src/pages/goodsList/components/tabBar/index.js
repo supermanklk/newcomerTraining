@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './index.css';
-import downArrow from '../../../../assets/img/down-arrow.png';
-import redArrow from '../../../../assets/img/red-down.png';
-import upDown from '../../../../assets/img/up-down.png';
-import filter from '../../../../assets/img/filter.png';
+import downArrow from '@assets/img/down-arrow.png';
+import redArrow from '@assets/img/red-down.png';
+import upDown from '@assets/img/up-down.png';
+import filter from '@assets/img/filter.png';
 
 export default function TabBar() {
     return (

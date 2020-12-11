@@ -7,12 +7,12 @@ import React from 'react';
 
 import './index.css'
 
-import electric from '../../../../assets/img/electric.png';
-import signal from '../../../../assets/img/signal.png';
-import leftArrow from '../../../../assets/img/left-arrow.png';
-import item from '../../../../assets/img/item-manage.png';
-import search from '../../../../assets/img/search.png';
-import camera from '../../../../assets/img/camera.png';
+import electric from '@assets/img/electric.png';
+import signal from '@assets/img/signal.png';
+import leftArrow from '@assets/img/left-arrow.png';
+import item from '@assets/img/item-manage.png';
+import search from '@assets/img/search.png';
+import camera from '@assets/img/camera.png';
 
 export default function Header () {
     return (

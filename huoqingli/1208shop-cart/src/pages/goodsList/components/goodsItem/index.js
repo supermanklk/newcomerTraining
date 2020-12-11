@@ -8,8 +8,8 @@ import React from 'react';
 
 import './index.css';
 
-import img1212 from '../../../../assets/img/1212.png';
-import rightArrow from '../../../../assets/img/right-arrow.png';
+import img1212 from '@assets/img/1212.png';
+import rightArrow from '@assets/img/right-arrow.png';
 
 
 export default function GoodsItem(props) {

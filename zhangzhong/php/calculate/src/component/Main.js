@@ -102,8 +102,7 @@ class Main extends Component{
      */
     calculate(){
         let resNum = math.format(math.evaluate(this.state.str.join("")));
-        console.log(resNum)
-        if (resNum === undefined){
+        if (resNum === 'undefined'){
             alert("请先输入，在计算");
         } else{
             this.setState({

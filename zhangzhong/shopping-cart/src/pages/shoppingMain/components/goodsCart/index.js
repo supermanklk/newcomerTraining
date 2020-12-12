@@ -30,7 +30,6 @@ class Cart extends Component{
      *
      */
     render(){
-        console.log(this.props)
         return (
             <div className="cart">
                 {
@@ -61,6 +60,9 @@ class Cart extends Component{
                                     </div>
                                     <div className="price">
                                         ￥<span className="price-num">{item.price}</span>
+                                        {
+                                            item.seckill ? <div className="sec-kill">秒杀价</div> : ''
+                                        }
                                     </div>
                                     <div className="tag">
                                         <div className="proprietary">自营</div>

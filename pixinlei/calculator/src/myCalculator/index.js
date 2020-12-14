@@ -61,6 +61,7 @@ class Index extends Component{
 
     // 计算器的计算函数
     funFather = (myName) => {
+        if(String(myName) === '+/-' || String(myName) === '%') return
         if (String(myName) === 'AC'){
             this.setState({
                 expression: '',

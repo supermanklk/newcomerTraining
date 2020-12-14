@@ -1,0 +1,168 @@
+.ranks {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.ranks img {
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+}
+
+.ranksLeft {
+    padding: 2px 10px;
+    width: 240px;
+}
+
+.ranks-title {
+    line-height: 18px;
+    width: 240px;
+    height: 36px;
+    font-size: 15px;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+ranks-title:after {
+    display: inline;
+    content: "...";
+    font-size: 16px;
+}
+
+.ranksKey {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    width: 240px;
+    overflow: hidden;
+}
+
+.ranksKey div {
+    background-color: rgb(238, 238, 238);
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    padding: 1px 8px;
+    margin: 2px;
+}
+
+.prize {
+    display: flex;
+    flex-direction: row;
+    color: red;
+    font-weight: bolder;
+    font-size: 17px;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.prize .over {
+    background-color: rgb(238, 41, 25);
+    color: #fff;
+    font-size: 10px;
+    padding: 0px 4px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.prize span {
+    font-size: 21px;
+}
+
+.comment {
+    font-size: 13px;
+    color: #999999;
+}
+
+.taoName {
+    font-size: 13px;
+    color: #999999;
+}
+
+.taoName span {
+    color: #000
+}
+
+.label {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.label .jd {
+    display: flex;
+}
+
+.label .own {
+    background-color: rgb(238, 41, 25);
+    color: #fff;
+    padding: 1px 4px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.label .jd .JD {
+    background-color: #000;
+    color: #ffffff;
+    padding: 1px 4px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.label .jd .JDTop {
+    background-color: rgb(246, 205, 45);
+    color: #000;
+    padding: 1px 4px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.new {
+    background-color: rgb(233, 248, 238);
+    color: rgb(105, 220, 163);
+    padding: 1px 4px;
+    border: 1px solid rgb(105, 220, 163);
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.pic {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.stock {
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    line-height: 24px;
+    font-size: 13px;
+    color: #fff;
+    width: 150px;
+    height: 24px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(0, 0, 0, .4);
+    letter-spacing: 1px;
+}
+
+.twelve {
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bolder;
+    padding: 2px 14px;
+    transform: rotate(45deg);
+    background-color: red;
+    right: -16px;
+}

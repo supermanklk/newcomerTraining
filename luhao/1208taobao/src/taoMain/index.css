@@ -1,0 +1,129 @@
+.tao-main{
+    width: 450px;
+    /*height: 900px;*/
+    /*margin: 20px;*/
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:10px 20px;
+    box-sizing: border-box;
+}
+.top{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+.top .time{
+    margin-left: 15px;
+}
+.top img{
+    width: 18px;
+    height: 18px;
+    margin:0px  5px;
+}
+.search{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.searchIcon img{
+    width: 25px;
+    height: 25px;
+}
+.searchBar{
+    height: 35px;
+    width: 340px;
+}
+.searchBar :nth-child(2){
+    position:relative;
+    top:-28px;
+    left:10px
+}
+.searchBar :nth-child(3){
+    position:relative;
+    top:-28px;
+    left:280px
+}
+
+.searchBar input{
+    height: 35px;
+    width: 340px;
+    padding:0px 40px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-radius: 17px;
+    background-color: rgb(245, 245, 245);
+}
+.choice{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.choice .choiceFirst{
+    position: relative;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.choice .choiceThird{
+    position: relative;
+}
+.choice .choiceThird :first-child{
+    position: absolute;
+    margin-top: 8px;
+}
+.choice .choiceThird :last-child{
+    position: relative;
+    margin-top: -2px;
+}
+.choice .choiceFirst .bigIcon{
+    position: absolute;
+    transform: translate(-58px,18px);
+}
+.subChoice {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.choiceOption {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.choiceOption div{
+    background-color: rgb(245, 245, 245);
+    padding: 3px 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.screen{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.screen img{
+    width:16px;
+    height: 16px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}

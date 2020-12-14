@@ -5,8 +5,9 @@
 */
 
 import React, { Component } from 'react';
-import { create, all } from 'mathjs'
-import './index.css'
+import { create, all } from 'mathjs';
+import './index.css';
+
 const config = {
     epsilon: 1e-12,
     matrix: 'Matrix',
@@ -14,7 +15,8 @@ const config = {
     precision: 64,
     predictable: false,
     randomSeed: null
-}
+};
+
 const math = create(all, config)
 
 class Calculator extends Component {
@@ -22,7 +24,9 @@ class Calculator extends Component {
         super(props);
         this.textInput = React.createRef();
         this.state = {
-            resultNum: '0'
+            resultNum: '0',
+            deleteCode: '',
+            resId: []
         }
     }
 
@@ -33,8 +37,34 @@ class Calculator extends Component {
      *
     */
     componentDidMount(){
-        document.addEventListener("keydown", this.onKeyDown)
+        document.addEventListener("keydown", this.onKeyDown);
+        // this.getCalcInfo();
     }
+
+    /**
+     * 获取计算结果信息
+     * @author 霍青利
+     * @date 2020/12/11 11:03
+     * @param
+    */
+    getCalcInfo() {
+        fetch('http://qlhuo.test/index.php')
+            .then(response => response.json())
+            .then(res => {
+                console.log(res);
+                // return res;
+                let resId = [];
+                res.forEach(item => {
+                    resId.push(item.id);
+                })
+                // console.log(resId)
+                this.setState({
+                    resId: resId
+                })
+            })
+    }
+
+
 
     /**
      * 页面销毁之前 解绑事件
@@ -47,51 +77,51 @@ class Calculator extends Component {
     }
 
     /**
-     * 鼠标按下事件
+     * 小键盘按下事件
      * @author 霍青利
      * @date 2020/12/2 19:26
-     * 
+     *
     */
     onKeyDown = (e) => {
         switch(e.keyCode) {
             case 96:
-            case 48:
+            // case 48:
                 this.handlePushNum(0);
                 break;
             case 97:
-            case 49:
+            // case 49:
                 this.handlePushNum(1);
                 break;
             case 98:
-            case 50:
+            // case 50:
                 this.handlePushNum(2);
                 break;
             case 99:
-            case 51:
+            // case 51:
                 this.handlePushNum(3);
                 break;
             case 100:
-            case 52:
+            // case 52:
                 this.handlePushNum(4);
                 break;
             case 101:
-            case 53:
+            // case 53:
                 this.handlePushNum(5);
                 break;
             case 102:
-            case 54:
+            // case 54:
                 this.handlePushNum(6);
                 break;
             case 103:
-            case 55:
+            // case 55:
                 this.handlePushNum(7);
                 break;
             case 104:
-            case 56:
+            // case 56:
                 this.handlePushNum(8);
                 break;
             case 105:
-            case 57:
+            // case 57:
                 this.handlePushNum(9);
                 break;
             case 106:
@@ -114,6 +144,8 @@ class Calculator extends Component {
                 break;
             case 8:
                 this.handleClearCalc();
+                break;
+            default:
                 break;
         }
     }
@@ -151,6 +183,70 @@ class Calculator extends Component {
     }
 
     /**
+     * 将计算结果添加到数据库
+     * @author 霍青利
+     * @date 2020/12/11 11:06
+     * @param
+    */
+    insertCalcResult(newCalc, res) {
+        fetch('http://qlhuo.test/calcRes.php', {
+            method: 'post',
+            headers: {
+                'Content-Type' : 'application/x-www-form-urlencoded;charset=utf-8;'
+            },
+            body: `formula=${newCalc}&result=${res}`
+        })
+            .then(response => response.json())
+            .then(res => {
+                console.log(res);
+            })
+    }
+
+
+
+    /**
+     * 获取期望删除的记录id
+     * @author 霍青利
+     * @date 2020/12/11 12:18
+     * @param
+    */
+    deleteCalcHistoryCode(e) {
+        this.setState({
+            deleteCode: e.target.value
+        })
+    }
+
+
+    /**
+     * 请求后台数据，删除对应 id 的记录
+     * @author 霍青利
+     * @date 2020/12/11 14:26
+     * @param
+     */
+    deleteCalcHistory(id) {
+        if (this.state.resId.indexOf(id) === -1) {
+            return alert('请输入正确的id值！')
+        }
+        fetch('http://qlhuo.test/deleteRes.php', {
+            method: 'post',
+            headers: {
+                'Content-Type' : 'application/x-www-form-urlencoded;charset=utf-8;'
+            },
+            body: `id=${id}`
+        })
+            .then(response => response.json())
+            .then(res => {
+                alert(res.msg);
+            })
+
+        this.setState({
+            deleteCode: ''
+        })
+    }
+
+
+
+    /**
      * 计算结果
      * @author 霍青利
      * @date 2020/11/30 16:10
@@ -184,20 +280,35 @@ class Calculator extends Component {
         }
 
         let newCalc = calcFormula.replaceAll('×', '*').replaceAll('÷', '/');
+        console.log(newCalc);
         // if (newCalc === "0.1 + 0.2")
         // eval 函数可以进行基本的运算操作
         let res = math.format(math.evaluate(newCalc));
         this.setState({
             resultNum: res + ''
-        })
+        });
+        // 将 + 转义
+        let formula = newCalc.replaceAll('+', "%2B")
+        this.insertCalcResult(formula, res);
+
+
     }
 
     render () {
+        let {deleteCode} = this.state;
         // console.log(math.bignumber('0.1 + 0.2'))
         return (
             <div className="container">
                 {/* 显示计算过程和结果的面板 */}
                 <div className="calc-result">
+                    <div className="history-calc">
+                        <button onClick={() => this.getCalcInfo()}>历史计算</button>
+                    </div>
+                    <div className="history-calc">
+                        <input type="number" placeholder="请输入要删除记录的id" value={deleteCode} onChange={(e) => this.deleteCalcHistoryCode(e)}/>
+                        <button onClick={() => this.deleteCalcHistory(deleteCode)}>删除记录</button>
+                    </div>
+
                     <div className="calc-result-item" ref={this.textInput}>{this.state.resultNum}</div>
                 </div>
 

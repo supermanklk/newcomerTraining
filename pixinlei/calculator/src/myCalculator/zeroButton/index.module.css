@@ -1,0 +1,20 @@
+.page {
+    width: 45vw;
+    height: 20vw;
+    border-bottom-right-radius: 10vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 9vw;
+    box-sizing: border-box;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border-top-left-radius: 10vh;
+    border-top-right-radius: 10vh;
+    font-size: 30px;
+    color: white;
+}
+.page {
+    border-bottom-left-radius: 10vh;
+}

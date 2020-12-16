@@ -1,0 +1,22 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(179,111,48);
+}
+.line1 {
+    height: 3vh;
+    width: 1px;
+    border-left: 4px solid rgb(169,101,36);
+    position: absolute;
+    top: 73vh;
+    left: 20vw;
+}
+
+.line2 {
+    height: 3vh;
+    width: 1px;
+    border-left: 4px solid rgb(169,101,36);
+    position: absolute;
+    top: 73vh;
+    left: 78vw;
+}

@@ -1,0 +1,61 @@
+.page {
+    width: 94vw;
+    height: 94vw;
+    border: 3px solid rgb(171,101,37);
+    margin: auto;
+    box-sizing: border-box;
+    padding: 2vw;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.things {
+    width: 28vw;
+    height: 28vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background-color: rgb(253,222,137);
+}
+img {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    height: 20vw;
+    overflow: hidden;
+}
+.title {
+    padding-top: 1vh;
+    padding-left: 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+}
+.startDraw {
+    width: 28vw;
+    height: 28vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background-color: rgb(253,222,137);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.bigTitle {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(153,97,25);
+}
+.smallTitle {
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 10px;
+    color: rgb(191,143,69);
+}

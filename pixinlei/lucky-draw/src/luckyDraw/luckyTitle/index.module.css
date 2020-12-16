@@ -1,0 +1,23 @@
+.title {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bigTitle {
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.smallTitle {
+    width: 100vw;
+    height: 10vh;
+    color: rgb(236,196,162);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}

@@ -4,69 +4,51 @@
  * description：文字轮播
  */
 import React from 'react';
-import ReactSwipe from 'react-swipe';
-import Style from './index.module.css'
+import { Carousel,  WingBlank } from 'antd-mobile';
+import 'antd-mobile/dist/antd-mobile.css';
+import style from './index.module.css'
 
 class LuckySlideShow extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            RecordName: [...['默认测试数据1','默认测试数据2'],...this.props.RecordName],
+            data: ['1', '2', '3'],
+            imgHeight: 16,
+            slideIndex: 2,
         }
-
     }
 
-    scrollData() { // 需要滚动的数据
-        let RecordName = JSON.parse(JSON.stringify(this.state.RecordName))
-        return (
-            RecordName.map((v,i) => {
-                return (
-                    <div className="carousel-item" key={i}>
-                        <ul className='clear-fix'>
-                            <div className={Style.data}>恭喜皮新雷获得{v}</div>
-                        </ul>
-                    </div>
-                )
-            })
-        )
-    }
-
-    newScrollData() { // 实际传过来的数据
-        let RecordName = JSON.parse(JSON.stringify(this.props.RecordName))
-        console.log(RecordName)
-        return (
-            RecordName.map((v,i) => {
-                return (
-                    <div className="carousel-item" key={i}>
-                        <ul className='clear-fix'>
-                            <div className={Style.data}>恭喜皮新雷获得{v}</div>
-                        </ul>
-                    </div>
-                )
-            })
-        )
-    }
     render(){
-        let opt = {
-            auto: 500,
-            speed: 5000,
-        }
-
-        let renderMyOwnData = () => { // 判断this.props.RecordName是否有值，来看是否换上真实数据
-            if(this.props.RecordName === []) {
-                // scrollData()
-            } else {
-
-            }
-        }
+        let {recordName} = this.props
         return (
-            <div id="home-category">
-                <ReactSwipe className={Style.carousel} swipeOptions={opt}>
-                    {this.scrollData(this)}
-                    {/*{this.a()}*/}
-                    {this.newScrollData(this)}
-                </ReactSwipe>
-            </div>
+            <WingBlank>
+                <Carousel
+                    dots={false}
+                    autoplayInterval={1000}
+                    autoplay={true}
+                    infinite
+                >
+                    {recordName.map((val, index) => (
+                        <a
+                            key={val + index}
+                            href="#"
+                            style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight,
+                            }}
+                        >
+                            <div className={style.item}
+                                alt=""
+                                style={{ width: '100%', verticalAlign: 'top', color: 'white' }}
+                                onLoad={() => {
+                                    window.dispatchEvent(new Event('resize'));
+                                    this.setState({ imgHeight: 'auto' });
+                                }}
+                            >
+                                {val}
+                            </div>
+                        </a>
+                    ))}
+                </Carousel>
+            </WingBlank>
         )
     }
 }

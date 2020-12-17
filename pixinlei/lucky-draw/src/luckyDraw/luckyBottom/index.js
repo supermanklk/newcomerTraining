@@ -4,22 +4,22 @@
  * description：抽奖底部轮播图
  */
 import React,{Component} from 'react';
-import Style from './index.module.css'
+import style from './index.module.css'
 import LuckySlideShow from "../luckySlideShow";
 
 class LuckyBottom extends Component{
     render(){
         return (
-            <div className={Style.page}>
-                <div className={Style.picture}>
+            <div className={style.page}>
+                <div className={style.picture}>
                     {/*左侧的小喇叭*/}
                     <svg className="icon" aria-hidden="true">
                         <use xlinkHref="#icon-laba"></use>
                     </svg>
                 </div>
                 {/*    右边的轮播图*/}
-                <div className={Style.slideShow}>
-                    <LuckySlideShow RecordName={this.props.RecordName}/>
+                <div className={style.slideShow}>
+                    <LuckySlideShow recordName={this.props.recordName}/>
                 </div>
             </div>
         );

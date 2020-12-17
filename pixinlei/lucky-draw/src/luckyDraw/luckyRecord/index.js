@@ -3,9 +3,8 @@
  * data：12-15
  * description：抽奖中奖记录
  */
-
 import React,{Component} from 'react';
-import Style from './index.module.css';
+import style from './index.module.css';
 
 
 class LuckyRecord extends Component{
@@ -23,12 +22,13 @@ class LuckyRecord extends Component{
         })
     }
     render(){
+        let {showRecord} = this.state
         return (
-            <div className={Style.page}>
+            <div className={style.page}>
                 {
-                    this.state.showRecord ?
-                        <div className={Style.record} onClick={this.showRecord.bind(this)}>
-                            {this.props.RecordName.map((v, i) => {
+                    showRecord ?
+                        <div className={style.record} onClick={this.showRecord.bind(this)}>
+                            {this.props.recordName.map((v, i) => {
                                 return <p key={i}>{v}</p>
                             })}
                         </div> :

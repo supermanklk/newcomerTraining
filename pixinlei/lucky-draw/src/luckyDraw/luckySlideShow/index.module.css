@@ -1,15 +1,5 @@
-.carousel {
-    background-color: rgb(179,111,48);
-    height: 16px;
+.item {
     overflow: hidden;
-    visibility: visible;
-    position: relative;
-    text-align: center;
-}
-.data {
-    height: 16px;
-    overflow: hidden;
-    line-height: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
 }

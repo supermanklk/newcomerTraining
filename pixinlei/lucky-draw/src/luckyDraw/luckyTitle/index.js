@@ -4,7 +4,7 @@
  * description：抽奖头部标题部分
  */
 import React,{Component} from 'react';
-import Style from './index.module.css'
+import style from './index.module.css'
 
 class LuckyTitle extends Component{
     constructor(props){
@@ -13,11 +13,11 @@ class LuckyTitle extends Component{
     }
     render(){
         return (
-            <div className={Style.title}>
-                <div className={Style.bigTitle}>
+            <div className={style.title}>
+                <div className={style.bigTitle}>
                     今日还有 {this.props.wish / this.props.expend} 次机会
                 </div>
-                <div className={Style.smallTitle}>
+                <div className={style.smallTitle}>
                     剩余 {this.props.wish} 心愿
                 </div>
             </div>

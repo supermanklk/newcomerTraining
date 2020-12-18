@@ -64,13 +64,10 @@ span {
     align-items: center;
 }
 
-.myitem {
-    margin-left: 1vw;
-    background-color: #fff;
-}
 
 .bottom {
     background-color: rgb(246, 246, 246);
+    height: 15vh;
 }
 
 button {
@@ -86,12 +83,34 @@ button {
     color: #ffffff;
 }
 
-.myinput {
-    /*line-height: 15px;*/
-    position: relative;
-    top: 1vh;
-    height: 4vh;
-    overflow: hidden;
-    left: 2vw;
-    width: 80vw;
+.item {
+    background-color: white;
+    border: 1px solid rgb(246, 246, 246);
+    height: 5vh;
+    line-height: 5vh;
+}
+.itemGreen {
+    background-color: rgb(223,241,219);
+    border: 1px solid rgb(246, 246, 246);
+    height: 5vh;
+    line-height: 5vh;
+}
+.task {
+    width: 100vw;
+    display: flex;
+}
+.task-title {
+    width: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my-input {
+    display: flex;
+    align-items: center;
+}
+.inputValue {
+    width: 83vw;
+    height: 40%;
+    margin-left: 3vw;
 }

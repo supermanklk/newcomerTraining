@@ -1,0 +1,109 @@
+#main {
+  width: 410px;
+  height: 700px;
+  background-color: black;
+  margin: 0;
+  padding: 20px 0px;
+  overflow: hidden;
+}
+
+#count {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  top: 0px
+}
+
+#result {
+  color: white;
+  font-size: 42px;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-end;
+}
+.record{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.ranks {
+  display: flex;
+  flex-direction: row;
+}
+
+.ranks div {
+  transition: 0.3s;
+}
+
+.ranks div:active {
+  transform: scale(1.1, 1.1);
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  border-radius: 50%;
+  margin: 8px;
+}
+
+
+.button span{
+  font-size: 28px;
+}
+.add{
+  position: absolute;
+  top: -7px;
+  left:16px
+}
+.del{
+  position: absolute;
+  top: 8px;
+  left:48px
+}
+.ranks .firstButton div{
+  position: relative;
+}
+
+.ranks .firstButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  background-color: rgb(165, 165, 165);
+}
+
+.ranks .buttonSymbol {
+  background-color: rgb(254, 158, 9);
+}
+
+.buttonZero {
+  width: 180px;
+  height: 80px;
+  line-height: 80px;
+  color: #fff;
+  border-radius: 40px;
+  background-color: rgb(51, 51, 51);
+  margin: 8px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}

@@ -17,7 +17,6 @@
 .container .calc-result {
   height: 280px;
   font-size: 48px;
-  padding-top: 100px;
   padding-right: 10px;
   box-sizing: border-box;
 }
@@ -26,6 +25,16 @@
   height: 80px;
   line-height: 80px;
   text-align: right;
+}
+.container .calc-result .history-calc {
+  text-align: right;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+.container .calc-result .history-calc input {
+  width: 100%;
+  outline: none;
 }
 .container .input-active {
   height: 500px;

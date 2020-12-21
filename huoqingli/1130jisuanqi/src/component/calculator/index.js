@@ -283,7 +283,8 @@ class Calculator extends Component {
         console.log(newCalc);
         // if (newCalc === "0.1 + 0.2")
         // eval 函数可以进行基本的运算操作
-        let res = math.format(math.evaluate(newCalc));
+        let res = math.evaluate(newCalc);
+        console.log(res + '')
         this.setState({
             resultNum: res + ''
         });

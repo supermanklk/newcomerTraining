@@ -22,7 +22,8 @@ class Login extends Component{
             isLogin: false,       //用来验证登录状态
             url: './images/17.jpg',//验证图的初始图
             isCheckShow: false,    //控制滑动验证图是否显示
-            isHaveCode: false       //用来验证是否已经生成验证码
+            isHaveCode: false,       //用来验证是否已经生成验证码
+            num:0
         }
         this.onChangeImg = this.onChangeImg.bind(this);
         this.checkTelephone = this.checkTelephone.bind(this);
@@ -113,8 +114,9 @@ class Login extends Component{
      *
      */
     componentDidMount(){
+        let num = Math.floor(Math.random()*10) +1;
         this.setState({
-            url: './images/16.jpg'
+            url: './images/'+num+'.jpg'
         })
     }
 
@@ -125,8 +127,14 @@ class Login extends Component{
      *
      */
     onReload = () => {
-        let num = this.genRandom()
-        this.setState({url: './images/'+num+'.jpg'})
+        let num = this.genRandom();
+        this.setState({num:num});
+        if (this.state.num===0 ||this.state.num !== num){
+            this.setState({url: './images/'+num+'.jpg'})
+        } else {
+           this.onReload();
+        }
+
     }
 
     /**
@@ -135,14 +143,8 @@ class Login extends Component{
      *
      */
     genRandom(){
-        let num = Math.floor(Math.random()*10)
-        if (num === 5){
-            return 15
-        } else if (num < 5){
-            return 16
-        } else{
-            return 17
-        }
+        let num = Math.floor(Math.random()*10) +1
+        return num
     }
 
     render(){

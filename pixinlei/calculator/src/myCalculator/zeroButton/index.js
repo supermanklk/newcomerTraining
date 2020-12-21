@@ -8,11 +8,6 @@ import ButtonCss from './index.module.css'
 
 
 class Index extends Component{
-    constructor(props){
-        super(props);
-        this.state = {...props}
-    }
-
     // 每个按钮点击功能
     funCalculator(e){
         this.props.funFather(e.target.innerHTML)
@@ -20,12 +15,12 @@ class Index extends Component{
 
     render(){
         let innerCss = {
-            background: this.state.color,
-            color: this.state.fontSize
+            background: this.props.color,
+            color: this.props.fontSize
         }
         return (
             <div className={ButtonCss.page} style={innerCss} onClick={this.funCalculator.bind(this)}>
-                {this.state.name}
+                {this.props.name}
             </div>
         );
     }

@@ -1,0 +1,44 @@
+/**
+ * @Description: nav-tab 组件样式
+ * @author 霍青利
+ * @date 2020/12/8 18:26
+*/
+nav {
+    height: 60px;
+    box-sizing: border-box;
+    img {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+    }
+    .nav-tab {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 30px;
+        line-height: 30px;
+        //background: #ccc;
+
+        .recommend {
+            position: relative;
+            font-weight: 600;
+            .red-arrow {
+                position: absolute;
+                bottom: -3px;
+                left: 20px;
+            }
+        }
+    }
+    .nav-tag {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        line-height: 30px;
+        //background: #ccc;
+        .tag {
+            background: #fafafa;
+            padding: 0 10px;
+            border-radius: 15px;
+        }
+    }
+}

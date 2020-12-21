@@ -1,0 +1,139 @@
+/**
+ * @Description: 商品项 组件样式
+ * @author 霍青利
+ * @date 2020/12/8 19:02
+*/
+.goods-item {
+  display: flex;
+}
+.goods-item .goods-img {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin-right: 10px;
+}
+.goods-item .goods-img .img1212 {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+.goods-item .goods-img .main-img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.goods-item .goods-img .rest-tips {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+}
+.goods-item .goods-describe {
+  flex: 1;
+}
+.goods-item .goods-describe .goods-title {
+  height: 42px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*显示的行数*/
+  overflow: hidden;
+  word-break: break-all;
+}
+.goods-item .goods-describe .goods-keyword {
+  display: flex;
+  font-size: 12px;
+}
+.goods-item .goods-describe .goods-keyword div {
+  margin: 0 5px;
+  padding: 0 10px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  color: #aaa;
+  max-height: 18px;
+  overflow-y: hidden;
+}
+.goods-item .goods-describe .goods-price {
+  color: #f00;
+  font-size: 18px;
+  font-weight: 600;
+}
+.goods-item .goods-describe .goods-price span {
+  font-size: 14px;
+}
+.goods-item .goods-describe .goods-price .second-kill {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  background-image: linear-gradient(to right, #f00, #fa652d);
+  padding: 1px 2px;
+}
+.goods-item .goods-describe .store-property {
+  font-size: 12px;
+}
+.goods-item .goods-describe .store-property .auto-trophy {
+  background: #f00;
+  color: #fff;
+  padding: 2px 3px;
+  border-radius: 5px;
+}
+.goods-item .goods-describe .store-property .jd-select {
+  margin: 5px;
+}
+.goods-item .goods-describe .store-property .jd-select span {
+  display: inline-block;
+  padding: 0 3px;
+}
+.goods-item .goods-describe .store-property .jd-select span:nth-child(1) {
+  background: #000;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+}
+.goods-item .goods-describe .store-property .jd-select span:nth-child(2) {
+  background: #ffff00;
+  color: #000;
+  border-radius: 0 5px 5px 0;
+}
+.goods-item .goods-describe .store-property .new-goods {
+  border: 1px solid #62d29a;
+  color: #62d29a;
+  padding: 1px 2px;
+  border-radius: 5px;
+}
+.goods-item .goods-describe .store-property .secure-purchase {
+  color: #7eb4ef;
+  border: 1px solid #7eb4ef;
+  padding: 1px 2px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.goods-item .goods-describe .store-property .tips1212 {
+  border: 1px solid #f00;
+  color: #f00;
+  padding: 1px 2px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.goods-item .goods-describe .goods-access,
+.goods-item .goods-describe .store-name {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+.goods-item .goods-describe .store-name span {
+  color: #000;
+}
+.goods-item .goods-describe .store-name img {
+  width: 14px;
+  height: 14px;
+  vertical-align: top;
+}
+.goods-item .hidden {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

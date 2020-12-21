@@ -1,0 +1,209 @@
+/**
+ * @Description: index.css
+ * @author zhangzhong
+ * @date 2020/12/9 
+*/
+.cart-box {
+    width: 380px;
+    height: 150px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    background-color: #001529;
+    flex: 0 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.main-img .rest {
+    width: 120px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    bottom: 0;
+    color: #aeabac;
+}
+
+.main-img .active-goods {
+    width: 100px;
+    height: 17px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 17px;
+    position: absolute;
+    top: 5px;
+    right: -34px;
+    background-color: #ef270a;
+    transform: rotateZ(45deg);
+    font-size: 12px;
+}
+
+.content {
+    height: 120px;
+    flex: 1 1 auto;
+    margin-left: 10px;
+}
+
+.content .content-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 17px;
+    font-weight: 600;
+}
+
+.content .keyword {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.content .keyword div {
+    padding: 0px 5px;
+    height: 20px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #a3a3a3;
+    margin-left: 5px;
+}
+
+.content .price {
+    color: #e54436;
+    font-size: 12px;
+}
+
+.content .price .price-num {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.content .tag {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content .tag div {
+    margin-right: 5px;
+}
+
+.content .tag .proprietary {
+    height: 15px;
+    width: 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #eeeeee;
+    background-color: #e92116;
+}
+
+.content .tag .jd-select {
+    width: 60px;
+    height: 16px;
+    display: flex;
+    font-size: 12px;
+}
+
+.content .tag .jd-select .jd {
+    height: 16px;
+    width: 30px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #2f2d2e;
+    color: #eeeeee;
+    margin: 0;
+}
+
+.content .tag .jd-select .select {
+    height: 16px;
+    width: 30px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #dfc229;
+    color: #001529;
+    margin: 0;
+}
+
+.content .tag .new-goods {
+    height: 16px;
+    width: 30px;
+    border: 1px solid #6ed4a2;
+    color: #6ed4a2;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.content .tag .ensure {
+    height: 16px;
+    width: 40px;
+    border: 1px solid #8abbec;
+    color: #8abbec;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.content .review {
+    font-size: 13px;
+    color: #ababab;
+}
+
+.content .business_name span {
+    font-size: 13px;
+    color: #a0a0a0;
+}
+
+.content .business_name .go {
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.content .business_name .go:hover {
+    color: #1E63B0;
+    cursor: pointer;
+}
+
+.content .business_name .go:active {
+    color: #FF4420;
+    transform: scale(1.1, 1.2);
+
+}
+.sec-kill{
+    width: 45px;
+    text-align: center;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius:5px;
+    margin-left: 5px;
+    color: #eee;
+    background-color: #f65f2d;
+}
+

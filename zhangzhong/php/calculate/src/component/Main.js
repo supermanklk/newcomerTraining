@@ -1,8 +1,8 @@
 /**
  * @Description: Main.js
  * @author zhangzhong
- * @date 2020/12/11 
-*/
+ * @date 2020/12/11
+ */
 import React,{Component} from "react";
 import './Main.css'
 import math from '../math.js'
@@ -19,8 +19,8 @@ class Main extends Component{
             num: 0
         }
         this.setNum = this.setNum.bind(this)
-        this.Fun = this.Fun.bind(this)
-        this.Point = this.Point.bind(this)
+        this.isFun = this.isFun.bind(this)
+        this.isPoint = this.isPoint.bind(this)
     }
 
 
@@ -44,7 +44,7 @@ class Main extends Component{
      *@Time:2020/12/3
      *
      */
-    Point(val){
+    isPoint(val){
         if (this.state.pointFlag){
             this.state.str.push(val)
             this.setState({
@@ -74,7 +74,7 @@ class Main extends Component{
      *@Time:2020/12/3
      *
      */
-    Fun(val){
+    isFun(val){
         if (this.state.operationFlag || val === "-"){
             if (val === "-"){
                 this.setState({
@@ -102,8 +102,7 @@ class Main extends Component{
      */
     calculate(){
         let resNum = math.format(math.evaluate(this.state.str.join("")));
-        console.log(resNum)
-        if (resNum === undefined){
+        if (resNum === 'undefined'){
             alert("请先输入，在计算");
         } else{
             this.setState({
@@ -221,23 +220,36 @@ class Main extends Component{
                 }}>获取计算的所有结果
                 </button>
                 <div className="one">
-                    <input className="input" type="text" placeholder="请输入修改数的id" ref={(input) => this.inputID = input}/>
+                    <input className="input" type="text" placeholder="请输入修改数的id" ref={
+                        (input) =>
+                            this.inputID = input
+                    }/>
                 </div>
                 <div className="two">
                     <input className="input" type="text" placeholder="请输入新的数字"
-                           ref={(input) => this.inputNewNum = input}/>
-                    <button className="btn" onClick={() => {
-                        this.upDate(this.inputID.value,this.inputNewNum.value)
-                    }}>提交更新数据
+                           ref={
+                               (input) =>
+                                   this.inputNewNum = input
+                           }/>
+                    <button className="btn" onClick={
+                        () => {
+                            this.upDate(this.inputID.value,this.inputNewNum.value)
+                        }
+                    }>提交更新数据
                     </button>
                 </div>
 
                 <div className="delete">
                     <input className="input" type="text" placeholder="请输入删除的id"
-                           ref={(input) => this.inputDleID = input}/>
-                    <button className="btn" onClick={() => {
-                        this.deleteById(this.inputDleID.value)
-                    }}>确定删除数据
+                           ref={
+                               (input) =>
+                                   this.inputDleID = input
+                           }/>
+                    <button className="btn" onClick={
+                        () => {
+                            this.deleteById(this.inputDleID.value)
+                        }
+                    }>确定删除数据
                     </button>
                 </div>
 
@@ -254,12 +266,12 @@ class Main extends Component{
                             <p>AC</p>
                         </li>
                         <li className="funF">
-                            <p>+/-</p>
+                            <p>+/-</p>is
                         </li>
                         <li className="funF">
                             <p>%</p>
                         </li>
-                        <li className="fun" onClick={() => this.Fun("/")}>
+                        <li className="fun" onClick={() => this.isFun("/")}>
                             <p>÷</p>
                         </li>
                         <li className="Number" onClick={() => this.setNum(7)}>
@@ -271,7 +283,7 @@ class Main extends Component{
                         <li className="Number" onClick={() => this.setNum(9)}>
                             <p>9</p>
                         </li>
-                        <li className="fun" onClick={() => this.Fun("*")}>
+                        <li className="fun" onClick={() => this.isFun("*")}>
                             <p>×</p>
                         </li>
                         <li className="Number" onClick={() => this.setNum(4)}>
@@ -283,7 +295,7 @@ class Main extends Component{
                         <li className="Number" onClick={() => this.setNum(6)}>
                             <p>6</p>
                         </li>
-                        <li className="fun" onClick={() => this.Fun("-")}>
+                        <li className="fun" onClick={() => this.isFun("-")}>
                             <p>-</p>
                         </li>
                         <li className="Number" onClick={() => this.setNum(1)}>
@@ -295,13 +307,13 @@ class Main extends Component{
                         <li className="Number" onClick={() => this.setNum(3)}>
                             <p>3</p>
                         </li>
-                        <li className="fun" onClick={() => this.Fun("+")}>
+                        <li className="fun" onClick={() => this.isFun("+")}>
                             <p>+</p>
                         </li>
                         <li className="Number two" onClick={() => this.setNum(0)}>
                             <p>0</p>
                         </li>
-                        <li className="Number" onClick={() => this.Point('.')}>
+                        <li className="Number" onClick={() => this.isPoint('.')}>
                             <p>.</p>
                         </li>
                         <li className="fun" onClick={() => this.calculate()}>

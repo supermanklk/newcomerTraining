@@ -1,0 +1,18 @@
+.page {
+    width: 100vw;
+    /*height: 5vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(253,241,215);
+    position: fixed;
+    bottom: 1vh;
+    font-size: 10px;
+}
+.record {
+    position: fixed;
+    height: 20vh;
+    background-color: white;
+    width: 100vw;
+    color: black;
+}

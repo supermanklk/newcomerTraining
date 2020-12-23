@@ -1,0 +1,123 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(230,229,235);
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    /*margin-top: 43px;*/
+}
+.todolist{
+    width: 95vw;
+    /*height: 45vh;*/
+    background-color: #f6f6f6;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin-top: 43px;
+    font-family: '黑体'
+}
+.title {
+    width: 100%;
+    height: 177px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    background: #f6f6f6;
+}
+.content {
+    width: 92%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 70px;
+}
+.haveBackground {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    height: 80px;
+    font-size: 25px;
+    border: 1px solid rgb(230,230,230);
+}
+.check {
+    margin-left: 24px;
+    margin-right: 18px;
+}
+.noBackground {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #dff1da;
+    height: 80px;
+    font-size: 25px;
+    border: 1px solid rgb(230,230,230);
+}
+.listBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 25px;
+    border: 1px solid rgb(230,230,230);
+    padding-left: 20px;
+}
+.line {
+    /*width: 0;*/
+    /*height: 0;*/
+    margin-top: 43px;
+    border-top: 1px solid rgb(230,230,230);
+    width: 92%;
+    margin-left: 67px;
+    margin-bottom: 43px;
+}
+.bottom {
+    width: 92%;
+    /*background: red;*/
+    height: 65px;
+    /*display: flex;*/
+    margin-left: 67px;
+    /*justify-content: center;*/
+    font-size: 23px;
+}
+.bottomTitle {
+    margin-left: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottomContent {
+    display: flex;
+}
+.addToList {
+    margin-top: 10px;
+    margin-left: 61px;
+    height: 47px;
+    width: 1500px;
+    font-size: 16px;
+    padding-left: 30px;
+}
+.addButton {
+    font-size: 26px;
+    /*background: #3479b5;*/
+    margin-left: 1495px;
+    border-radius: 8%;
+}
+button {
+    margin-top: 30px;
+    background: #3479b5;
+    height: 67px;
+    width: 181px;
+    border-radius: 8%;
+    font-size: 26px;
+    color: white;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #afafaf;
+    /*padding-left: 30px;*/
+    font-size: 18px;
+    line-height: 47px
+}

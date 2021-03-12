@@ -1,0 +1,65 @@
+.news {
+  height: 43px;
+  width: 375px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.news:first-child{
+  background-image: url('../../static/zhiding.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+.left {
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+}
+
+.num-icon {
+  color: #df954e;
+  font-style: italic;
+}
+.wei-style {
+  color: #dd766c;
+  font-weight: 700;
+}
+.content {
+  padding-left: 15px;
+}
+.num {
+  font-size: 12px;
+  color: #a4a4a4;
+  padding-left: 6px;
+}
+.tag {
+  margin-right: 14px;
+  text-align: center;
+}
+.xin {
+  width: 20px;
+  height: 20px;
+  color: whitesmoke;
+  background-color: #ef5070;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+.re {
+  width: 20px;
+  height: 20px;
+  color: whitesmoke;
+  border-radius: 4px;
+  background-color: #f68c1d;
+  margin-right: 15px;
+}
+.fei {
+  width: 20px;
+  height: 20px;
+  color: whitesmoke;
+  border-radius: 4px;
+  background-color: #ea530f;
+  margin-right: 15px;
+}

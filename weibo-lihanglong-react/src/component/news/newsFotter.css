@@ -1,0 +1,111 @@
+.news-content-top {
+  height: 40px;
+  width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+.top-left {
+  font-size: 15px;
+  color: #9f9f9f;
+  margin-left: 10px;
+}
+
+.content-right {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.content-top-img {
+  height: 30px;
+  width: 80px;
+}
+.icon-news-down {
+  height: 20px;
+  width: 20px;
+  fill: #9f9f9f;
+}
+
+.news-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-right: 2px;
+}
+.top-header-left {
+  display: flex;
+  justify-content: center;
+}
+.user-name {
+  color: #f2661b;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.time {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #919191;
+  padding-left: 10px;
+}
+.user-img {
+  height: 50px;
+  width: 58px;
+}
+.top-header-right {
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 15px;
+  color: #f2661b;
+  border: 1px solid #f2661b;
+  margin-right: 30px;
+  text-align: center;
+  border-radius: 14px;
+  padding: 2px;
+}
+
+.really-content {
+  font-size: 16px;
+  margin: 10px;
+  line-height: 24px;
+}
+
+.big-img {
+  width: 355px;
+  height: 190px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-footer {
+  width: 260px;
+  height: 20px;
+  outline: none;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 32px;
+  background-image: url("../../static/bianji.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 10px 4px;
+}
+.icon-news-show {
+  width: 20px;
+  height: 20px;
+}
+.icon-news-moremore {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}

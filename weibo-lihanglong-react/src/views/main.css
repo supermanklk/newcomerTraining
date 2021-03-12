@@ -1,0 +1,103 @@
+.main-total {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  overflow: hidden;
+}
+.top {
+  position: relative;
+}
+
+.top-icon {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.left-icon {
+  display: flex;
+  align-items: center;
+}
+.icon-back {
+  width: 25px;
+  height: 25px;
+  fill: white;
+}
+.icon-more {
+  width: 25px;
+  height: 25px;
+  fill: white;
+  padding-left: 260px;
+}
+
+.top-image {
+  width: 375px;
+  height: 200px;
+}
+.item-list {
+  height: 40px;
+  width: 375px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  color: #8d8d8d;
+}
+
+.center-text {
+  height: 30px;
+  width: 375px;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: #ebebeb;
+  color: #969292;
+  padding-left: 15px;
+}
+
+/* 底部样式 */
+.foot-tab {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 375px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+.foot-item {
+  display: flex;
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+}
+.foot-item:first-child {
+  color: #df954e;
+}
+.foot-item:nth-last-child(1) {
+  border: none;
+}
+.icon-search {
+  height: 25px;
+  width: 25px;
+  padding-right: 5px;
+  fill: #df954e;
+}
+.icon-gouwu {
+  height: 25px;
+  width: 25px;
+  padding-right: 5px;
+}
+.icon-taolun {
+  height: 25px;
+  width: 25px;
+  padding-right: 5px;
+}
+.icon-paihang {
+  height: 25px;
+  width: 25px;
+  padding-right: 5px;
+}

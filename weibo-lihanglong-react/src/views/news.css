@@ -1,0 +1,34 @@
+.news-total {
+  width: 375px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-top {
+  display: flex;
+  justify-content: space-between;
+  width: 375px;
+  height: 115px;
+  background: linear-gradient(#902714, #bd3c28, #b42e1b);
+  padding-top: 20px;
+}
+
+.icon-news-back {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+.news-input {
+  height: 30px;
+  width: 330px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 35px;
+  background-image: url("../static/search.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px 6px;
+}

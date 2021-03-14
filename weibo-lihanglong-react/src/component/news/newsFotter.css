@@ -1,15 +1,15 @@
 .news-content-top {
-  height: 40px;
+  height: 35px;
   width: 375px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #ebebeb;
 }
 .top-left {
   font-size: 15px;
   color: #9f9f9f;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .content-right {
@@ -22,9 +22,10 @@
   width: 80px;
 }
 .icon-news-down {
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   fill: #9f9f9f;
+  margin-right: 6px;
 }
 
 .news-top-header {
@@ -41,36 +42,45 @@
 }
 .user-name {
   color: #f2661b;
-  font-size: 16px;
-  padding-left: 10px;
+  font-size: 15px;
+  padding-left: 8px;
 }
 .time {
-  margin-top: 5px;
-  font-size: 14px;
+  margin-top: 3px;
+  font-size: 12px;
   color: #919191;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 .user-img {
-  height: 50px;
-  width: 58px;
+  height: 45px;
+  width: 52px;
 }
 .top-header-right {
-  width: 60px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 15px;
+  width: 50px;
+  height: 20px;
+  line-height: 18px;
+  font-size: 13px;
   color: #f2661b;
   border: 1px solid #f2661b;
-  margin-right: 30px;
+  margin-right: 10px;
   text-align: center;
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 2px;
 }
 
 .really-content {
-  font-size: 16px;
+  font-size: 15px;
   margin: 10px;
   line-height: 24px;
+  color: #464646;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.content-item:nth-last-child(1){
+  color: #597fae;;
+}
+.new-content-style-split{
+  color: #597fae;
 }
 
 .big-img {
@@ -84,28 +94,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid #eeeeee;
+  padding-top: 6px;
 }
 .input-footer {
-  width: 260px;
-  height: 20px;
+  width: 240px;
+  height: 25px;
   outline: none;
   border: none;
   background-color: #f0f0f0;
-  border-radius: 10px;
-  margin-top: 5px;
+  border-radius: 12.5px;
   margin-left: 10px;
+  margin-bottom: 5px;
   padding-left: 32px;
   background-image: url("../../static/bianji.png");
   background-repeat: no-repeat;
   background-size: 15px;
-  background-position: 10px 4px;
+  background-position: 10px 5px;
 }
 .icon-news-show {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  fill: #656565;
 }
 .icon-news-moremore {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  fill: #656565;
 }

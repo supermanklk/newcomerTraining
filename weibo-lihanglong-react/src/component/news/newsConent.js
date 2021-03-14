@@ -4,7 +4,7 @@
  * @Author       : 李航龙
  * @Date         : 2021-03-12 17:30:37
  * @LastEditors  : 李航龙
- * @LastEditTime : 2021-03-12 17:45:31
+ * @LastEditTime : 2021-03-14 09:55:20
  * @FilePath     : \\newcomerTraining\\weibo-lihanglong-react\\src\\component\\news\\newsConent.js
  * Copyright (C) 2021 李航龙. All rights reserved.
  */
@@ -17,7 +17,7 @@ class NewsConent extends Component {
         super()
         this.state = {
             newsTitle: "#中国灵活就业已涉及2亿多人#",
-            content: "导语: 国务院总理李克强:我们一方面继续鼓励增加相对稳定的就业岗位,另一方面也要广开灵活就业的渠道。现在,中国灵活就业已涉及2亿多人。",
+            content: "导语： 国务院总理李克强：我们一方面继续鼓励增加相对稳定的就业岗位，另一方面也要广开灵活就业的渠道。现在，中国灵活就业已涉及2亿多人。",
         }
     }
     render() {

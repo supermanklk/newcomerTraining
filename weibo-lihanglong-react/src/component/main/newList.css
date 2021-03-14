@@ -7,11 +7,11 @@
   align-items: center;
   border-bottom: 1px solid #ccc;
 }
-.news:first-child{
-  background-image: url('../../static/zhiding.png');
-  background-size: 20px;
+.news:first-child {
+  background-image: url("../../static/zhiding.png");
+  background-size: 18px;
   background-repeat: no-repeat;
-  background-position: 10px 10px;
+  background-position: 11px 12px;
 }
 .left {
   display: flex;
@@ -22,13 +22,14 @@
 .num-icon {
   color: #df954e;
   font-style: italic;
+  width: 18px;
 }
 .wei-style {
   color: #dd766c;
   font-weight: 700;
 }
 .content {
-  padding-left: 15px;
+  padding-left: 8px;
 }
 .num {
   font-size: 12px;
@@ -38,28 +39,30 @@
 .tag {
   margin-right: 14px;
   text-align: center;
+  line-height: 16px;
+  font-size: 12px;
 }
 .xin {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   color: whitesmoke;
   background-color: #ef5070;
-  border-radius: 4px;
-  margin-right: 15px;
+  border-radius: 3px;
+  margin-right: 13px;
 }
 .re {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: #f68c1d;
-  margin-right: 15px;
+  margin-right: 13px;
 }
 .fei {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: #ea530f;
-  margin-right: 15px;
+  margin-right: 13px;
 }

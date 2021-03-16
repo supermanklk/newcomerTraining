@@ -30,7 +30,7 @@
   width: 25px;
   height: 25px;
   fill: white;
-  padding-left: 260px;
+  padding-left: 270px;
 }
 
 .top-image {
@@ -45,6 +45,28 @@
   align-items: center;
   font-size: 15px;
   color: #8d8d8d;
+  position: relative;
+}
+.item:first-child{
+  color: black;
+}
+.item-list::after {
+  content: " ";
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fd7904;
+  z-index: 10;
+  position: absolute;
+  bottom: 2px;
+  left: 46px;
+}
+.here {
+  position: absolute;
+  bottom: 3px;
+  width: 30px;
+  height: 5px;
+  background-color: #df954e;
 }
 
 .center-text {
@@ -67,7 +89,7 @@
   height: 50px;
   width: 375px;
   background-color: #f8f8f8;
-  font-size: 16px;
+  font-size: 15px;
 }
 .foot-item {
   display: flex;
@@ -81,23 +103,23 @@
   border: none;
 }
 .icon-search {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding-right: 5px;
   fill: #df954e;
 }
 .icon-gouwu {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding-right: 5px;
 }
 .icon-taolun {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding-right: 5px;
 }
 .icon-paihang {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   padding-right: 5px;
 }

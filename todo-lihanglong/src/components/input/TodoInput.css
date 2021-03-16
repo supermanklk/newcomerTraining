@@ -1,0 +1,17 @@
+@media screen and (max-width: 620px) {
+    header{
+        position: relative;
+    }
+    label{
+        width:300px;
+        position: absolute;
+        left: calc(50% - 50px);
+    }
+    input{
+        width: 300px;
+        position: absolute;
+        left: 20%;
+        left: 20%;
+        top: 50px;
+    }
+}

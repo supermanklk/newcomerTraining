@@ -20,6 +20,9 @@ class News extends Component {
             newsTitle: "#中国灵活就业已涉及2亿多人#",
         }
     }
+    handleBack(){
+        window.location.href = "http://localhost:3000/#/"
+    }
     render() {
 
         const { newsTitle } = this.state
@@ -27,7 +30,7 @@ class News extends Component {
         return (
             <div className="news-total">
                 <div className="news-top">
-                    <svg className="icon-news-back" aria-hidden="true">
+                    <svg className="icon-news-back" aria-hidden="true" onClick={()=>this.handleBack()}>
                         <use xlinkHref="#icon-zuojiantou"></use>
                     </svg>
                     <input className="news-input" placeholder={newsTitle}></input>

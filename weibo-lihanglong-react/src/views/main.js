@@ -1,17 +1,17 @@
 /*
- * @Description  : 
+ * @Description  :
  * @Version      : 1.0
  * @Author       : 李航龙
  * @Date         : 2021-03-12 09:55:37
  * @LastEditors  : 李航龙
- * @LastEditTime : 2021-03-12 18:08:43
+ * @LastEditTime : 2021-03-14 10:07:21
  * @FilePath     : \\newcomerTraining\\weibo-lihanglong-react\\src\\views\\main.js
  * Copyright (C) 2021 李航龙. All rights reserved.
  */
-import React, { Component } from 'react'
-import './main.css'
-import imageUrl from '../static/mainTop.png'
-import NewList from '../component/main/newList'
+import React, { Component } from "react";
+import "./main.css";
+import imageUrl from "../static/mainTop.png";
+import NewList from "../component/main/newList";
 
 class Main extends Component {
   render() {
@@ -44,15 +44,15 @@ class Main extends Component {
         {/* item切换 */}
         <div className="item-list">
           {itemList.map((item, index) => {
-            return <div key={index} className="item">
-              {item.text}
-            </div>
+            return (
+              <div key={index} className="item">
+                {item.text}
+              </div>
+            );
           })}
         </div>
         {/* 中间内容 */}
-        <div className="center-text">
-          实时热点，每分钟更新一次
-        </div>
+        <div className="center-text">实时热点，每分钟更新一次</div>
         {/* 新闻列表渲染 */}
         <NewList />
         {/* 底部 */}
@@ -90,4 +90,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+export default Main;

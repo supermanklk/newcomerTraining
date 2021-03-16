@@ -1,3 +1,11 @@
+/**
+ * @Description: 
+ * @Version: 1.0
+ * @Author: 李航龙
+ * @Date: 2021-03-16 18:25:57
+ * @LastEditors: 李航龙
+ * @LastEditTime: Do not edit
+ */
 export const ADD = "ADD_TODO";
 export const SUB = "SUB_TODO";
 export const SUBDID = "SUB_DID"

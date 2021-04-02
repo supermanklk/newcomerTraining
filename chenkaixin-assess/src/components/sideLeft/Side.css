@@ -1,0 +1,22 @@
+.side-title {
+  display: flex;
+  width: 256px;
+  height: 62px;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-title-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.side-title-font {
+  width: 160px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.icon-font {
+  font-size: 15px;
+}

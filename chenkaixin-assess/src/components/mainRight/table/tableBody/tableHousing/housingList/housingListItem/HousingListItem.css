@@ -1,0 +1,180 @@
+.housing-list-item-body {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.housing-list-item-body:hover {
+  background: #FAFAFA;
+  cursor: pointer;
+}
+
+.housing-list-item-checkbox {
+  margin-top: 19px;
+  margin-left: 24px;
+}
+
+.housing-list-item-f-a-j {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.housing-list-item-personalName {
+  width: 216px;
+  height: 54px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+  margin-left: 11px;
+}
+
+.housing-list-item-name {
+  width: 85px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-phoneNum {
+  width: 105px;
+  height: 53px;
+  margin-left: 21px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-connectEnte {
+  width: 205px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-result {
+  width: 90px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-result-red {
+  width: 90px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #ff4d4f;
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-businessLicense {
+  width: 85px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-loginAccount {
+  width: 125px;
+  height: 53px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+}
+
+.housing-list-item-submit {
+  width: 28px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  text-align: right;
+  line-height: 22px;
+  margin-left: 11px;
+}
+
+.housing-list-item-line {
+  width: 1px;
+  height: 14px;
+  background: #d8d8d8;
+  margin-left: 8px;
+}
+
+.housing-list-item-more {
+  width: 28px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #1890ff;
+  line-height: 22px;
+  margin-left: 8px;
+}
+
+.housing-list-item-operate-icon {
+  margin-left: 8px;
+}
+
+.housing-list-item-operate {
+  position: relative;
+}
+
+.housing-list-item-hover {
+  position: absolute;
+  top: 42px;
+  left: 23px;
+  background: #ffffff;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  width: 96px;
+  height: 104px;
+  display: none;
+}
+
+.housing-list-item-hover-item {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.housing-list-item-hover-item:hover {
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.item-1 {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 34px;
+}
+
+.item-2 {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #b7b7b7;
+  line-height: 34px;
+}
+
+.housing-list-item-operate:hover .housing-list-item-hover {
+  display: block;
+  z-index: 2;
+}

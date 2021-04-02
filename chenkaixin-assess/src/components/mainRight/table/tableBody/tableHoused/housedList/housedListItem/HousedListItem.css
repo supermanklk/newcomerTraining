@@ -1,0 +1,135 @@
+.housed-list-item-body {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.housed-list-item-body:hover {
+  background: #FAFAFA;
+  cursor: pointer;
+}
+
+.housed-list-item-f-a-j {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.housed-list-item-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-left: 24px;
+  margin-top: 19px;
+}
+
+.housed-list-item-personalName {
+  width: 216px;
+  margin-left: 10px;
+}
+
+.housed-list-item-name {
+  width: 85px;
+}
+
+.housed-list-item-phoneNum {
+  width: 105px;
+  margin-left: 21px;
+}
+
+.housed-list-item-connectEnte {
+  width: 205px;
+}
+
+.housed-list-item-businessLicense {
+  width: 85px;
+  margin-left: 10px;
+}
+
+.housed-list-item-successTime {
+  width: 160px;
+  margin-left: 12px;
+}
+
+.housed-list-item-operate {
+  display: flex;
+  position: relative;
+}
+
+.housed-list-item-public {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 22px;
+  height: 53px;
+}
+
+.housed-list-item-operate-detail {
+  width: 56px;
+  height: 22px;
+  margin-left: 16px;
+  margin-top: 16px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #1890ff;
+  text-align: right;
+  line-height: 22px;
+}
+
+.housed-list-item-operate-line {
+  width: 1px;
+  height: 14px;
+  background: #d8d8d8;
+  margin-left: 8px;
+  margin-top: 19px;
+}
+
+.housed-list-item-operate-more {
+  width: 28px;
+  height: 22px;
+  margin-left: 8px;
+  margin-top: 16px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #1890ff;
+  line-height: 22px;
+}
+
+.housed-list-item-operate-icon {
+  width: 12px;
+  height: 12px;
+  margin-top: 16px;
+  margin-left: 8px;
+}
+
+.housed-list-item-hover {
+  position: absolute;
+  width: 96px;
+  height: 70px;
+  background: #ffffff;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  top: 42px;
+  left: 56px;
+  display: none;
+}
+
+.housed-list-item-operate:hover .housed-list-item-hover {
+  display: block;
+  z-index: 2;
+}
+
+.housed-list-item-hover-item {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 34px;
+}
+
+.housed-list-item-hover-item:hover {
+  background: #fafafa;
+  cursor: pointer;
+}

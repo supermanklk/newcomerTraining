@@ -1,0 +1,7 @@
+.housing-list-body {
+    width: 1090px;
+    display: flex;
+    margin-left: 24px;
+    width: 1090px;
+    flex-direction: column;
+}

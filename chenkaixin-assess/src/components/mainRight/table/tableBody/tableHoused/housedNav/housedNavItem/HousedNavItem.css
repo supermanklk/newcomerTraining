@@ -1,0 +1,59 @@
+.housed-nav-item-body {
+  display: flex;
+}
+
+.housed-nav-item-f-a-j {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.housed-nav-item-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-top: 19px;
+  margin-left: 24px;
+}
+
+.housed-nav-item-personalName {
+  width: 170px;
+  margin-left: 33px;
+}
+
+.housed-nav-item-name {
+  width: 85px;
+  margin-left: 23px;
+}
+
+.housed-nav-item-phoneNum {
+  width: 60px;
+  margin-left: 45px;
+}
+
+.housed-nav-item-connectEnte {
+  width: 205px;
+  margin-left: 21px;
+}
+
+.housed-nav-item-businessLicense {
+  width: 85px;
+  margin-left: 11px;
+}
+
+.housed-nav-item-successTime {
+  width: 161px;
+  margin-left: 10px;
+}
+
+.housed-nav-item-operate {
+  width: 80px;
+  margin-left: 37px;
+}
+
+.housed-public {
+  height: 54px;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 22px;
+}

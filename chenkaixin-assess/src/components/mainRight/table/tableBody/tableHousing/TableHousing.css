@@ -1,0 +1,244 @@
+.housing-btn-box {
+  display: flex;
+  cursor: pointer;
+}
+
+.f-a-j {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-1 {
+  width: 88px;
+  height: 32px;
+  background: #1890ff;
+  border-radius: 2px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 22px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.btn-2 {
+  width: 116px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.table-housing-footer {
+  display: flex;
+}
+
+.table-housing-footer-left {
+  width: 160px;
+  height: 20px;
+  margin-top: 16px;
+  margin-left: 24px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 37px;
+}
+
+.table-housing-footer-right {
+  margin-left: 664px;
+  display: flex;
+}
+
+.go-back {
+  width: 16px;
+  height: 16px;
+  margin-top: 16px;
+}
+
+.zuojiantou1 {
+  font-size: 12px;
+}
+
+.footer-page {
+  width: 24px;
+  height: 24px;
+  background: #1890ff;
+  border-radius: 4px;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 22px;
+}
+
+.go-head {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  margin-top: 16px;
+}
+
+.footer-times-page {
+  width: 84px;
+  height: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-radius: 4px;
+  margin-left: 19px;
+  margin-top: 17px;
+  display: flex;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  line-height: 22px;
+  padding-left: 2px;
+}
+
+.xiajiantou_huaban {
+  margin-left: 9px;
+  margin-top: 4px;
+}
+
+.footer-jump-pages-text {
+  width: 28px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: left;
+  line-height: 22px;
+  margin-left: 16px;
+  margin-top: 18px;
+}
+
+.footer-jump-page input {
+  width: 48px;
+  height: 24px;
+  margin-top: 16px;
+  margin-left: 8px;
+  outline: none;
+}
+
+.footer-jump-page-text {
+  width: 14px;
+  height: 22px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: left;
+  line-height: 22px;
+  margin-top: 17px;
+  margin-left: 8px;
+}
+
+.f {
+  display: flex;
+}
+
+.f-a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.username-text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  width: 56px;
+  height: 34px;
+  margin-left: 39px;
+  margin-top: 21px;
+}
+
+.phone-text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  width: 56px;
+  height: 34px;
+  margin-left: 120px;
+  margin-top: 21px;
+}
+
+.firm-text {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  width: 71px;
+  height: 34px;
+  margin-left: 148px;
+  margin-top: 21px;
+}
+
+.input-box {
+  width: 200px;
+  height: 32px;
+  margin-top: 22px;
+  margin-left: 8px;
+  border-radius: 4px;
+}
+
+.section-body {
+  width: 200px;
+  height: 32px;
+  margin-top: 12px;
+  margin-left: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  color: rgba(0,0,0,0.25);
+}
+
+.text-box {
+  width: 91px;
+  height: 34px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.m-l-1 {
+  margin-left: 4px;
+}
+
+.m-l-2 {
+  margin-left: 85px;
+}
+
+.button-box {
+  width: 74px;
+  height: 32px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.b-m-l-1 {
+  margin-left: 268px;
+}
+
+.b-m-l-2 {
+  margin-left: 11px;
+}

@@ -33,7 +33,7 @@ class HousingListItem extends Component {
     const data = await axios
       .get("http://jzkh.happy-chen.cn/getHousingList")
       .then((res) => {
-        const data = res.data;
+        let data = res.data;
         data = data.map((item) => {
           item.is_checked = item.is_checked == "false" ? false : true;
           return item;

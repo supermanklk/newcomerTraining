@@ -1,0 +1,99 @@
+.housing-nav-item-body {
+    display: flex;
+}
+
+.f-a-j {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.housing-nav-item-checkbox {
+    margin-top: 16px;
+    margin-left: 24px;
+}
+
+.housing-nav-item-personalName {
+    width: 170px;
+    height: 54px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+    margin-left: 34px;
+}
+
+.housing-nav-item-name {
+    width: 85px;
+    height: 54px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+    margin-left: 22px;
+}
+
+.housing-nav-item-phoneNum {
+    width: 60px;
+    height: 54px;
+    margin-left: 45px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}
+
+.housing-nav-item-connectEnte {
+    width: 205px;
+    height: 54px;
+    margin-left: 21px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}
+
+.housing-nav-item-result {
+    width: 90px;
+    height: 54px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}
+
+.housing-nav-item-businessLicense {
+    width: 85px;
+    height: 54px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}
+
+.housing-nav-item-loginAccount {
+    width: 125px;
+    height: 54px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}
+
+.housing-nav-item-operate {
+    width: 80px;
+    height: 54px;
+    margin-left: 4px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    line-height: 22px;
+}

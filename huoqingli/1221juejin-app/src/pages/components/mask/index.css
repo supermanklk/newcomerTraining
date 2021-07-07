@@ -1,0 +1,118 @@
+.hidden,
+.hide {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+#captcha {
+  width: 100%;
+}
+#qr-code {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+.mask-container {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.mask-container .login-form {
+  position: relative;
+  width: 318px;
+  height: 308px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  box-sizing: border-box;
+}
+.mask-container .login-form .login-logo {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mask-container .login-form input {
+  border: none;
+  outline: none;
+}
+.mask-container .login-form .phone-login {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+}
+.mask-container .login-form .phone-login i {
+  float: right;
+  cursor: pointer;
+}
+.mask-container .login-form .phone-number,
+.mask-container .login-form .phone-code {
+  width: 270px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  padding: 0 10px;
+  display: flex;
+  color: #333;
+  margin-bottom: 10px;
+}
+.mask-container .login-form .phone-number input {
+  width: 186px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.mask-container .login-form .phone-number div {
+  width: 60px;
+}
+.mask-container .login-form .border-highlight {
+  border: 1px solid #007fff;
+}
+.mask-container .login-form .phone-code input {
+  width: 150px;
+}
+.mask-container .login-form .phone-code button {
+  width: 100px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #007fff;
+  cursor: pointer;
+}
+.mask-container .login-form .login-btn {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  background: #007fff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+.mask-container .login-form .other-login {
+  margin: 12px 0 20px;
+  color: #007fff;
+  font-size: 14px;
+}
+.mask-container .login-form .agreement-portal {
+  font-size: 14px;
+}
+.mask-container .login-form .agreement-portal a {
+  color: #007fff;
+}
+/*# sourceMappingURL=index.css.map */

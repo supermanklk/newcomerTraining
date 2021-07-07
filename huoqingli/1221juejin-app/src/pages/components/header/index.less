@@ -1,0 +1,117 @@
+/**
+ * @Description: 头部header组件的样式
+ * @author 霍青利
+ * @date 2020/12/17 16:41
+*/
+a {
+    text-decoration: none;
+    color: #909090;
+}
+.header-container {
+    height: 106px;
+    background: #fff;
+    color: #71777c;
+    .pages-nav {
+        display: flex;
+        width: 960px;
+        height: 60px;
+        margin: 0 auto;
+        line-height: 60px;
+        box-sizing: border-box;
+        .pages-nav-left {
+            display: flex;
+            align-items: center;
+            img {
+                width: 100px;
+                height: 50px;
+                vertical-align: middle;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+
+            .pages-nav-item {
+                width: 70px;
+                text-align: center;
+                user-select: none;
+
+            }
+
+            .pages-nav-item:hover {
+                cursor: pointer;
+                color: #006cff;
+            }
+
+            .pages-nav-first {
+                color: #006cff;
+            }
+
+
+        }
+        .pages-nav-right {
+            display: flex;
+            align-items: center;
+            .search {
+                position: relative;
+                input {
+                    width: 158px;
+                    height: 28px;
+                    padding: 0 15px;
+                    outline: none;
+                    background: #f9fafb;
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+                    margin: 0 15px 0 180px;
+                }
+
+                i {
+                    position: absolute;
+                    right: 28px;
+                    top: 3px;
+                    cursor: pointer;
+                }
+            }
+
+            button {
+                height: 30px;
+                width: 72px;
+                border: 1px solid #006cff;
+                background: #006cff;
+                outline: none;
+                cursor: pointer;
+                color: #fff;
+                border-radius: 3px;
+                margin: 15px;
+            }
+
+            .login-btn {
+                background: #fff;
+                color: #006cff;
+                margin: 0;
+            }
+
+        }
+    }
+    .content-nav {
+        height: 46px;
+        line-height: 46px;
+        border-top: 1px solid #eee;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+        .content-nav-list {
+            width: 960px;
+            margin: 0 auto;
+            .content-nav-item {
+                font-size: 14px;
+                margin-right: 24px;
+                &:first-child {
+                    color: #006cff;
+                }
+                &:hover {
+                    color: #007fff;
+                }
+
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,268 @@
+/**
+ * @Description: 主体内容区域的样式文件
+ * @author 霍青利
+ * @date 2020/12/18 10:14
+*/
+.main-container {
+  width: 960px;
+  margin: 15px auto;
+  display: flex;
+}
+.main-container .main-content {
+  width: 700px;
+  background: #fff;
+  margin-right: 20px;
+}
+.main-container .main-content .main-content-nav {
+  height: 46px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  padding: 14px 12px;
+  box-sizing: border-box;
+}
+.main-container .main-content .main-content-nav a {
+  padding: 0 15px;
+}
+.main-container .main-content .main-content-nav a:first-child {
+  color: #007fff;
+}
+.main-container .main-content .main-content-nav a:nth-child(2) {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.main-container .main-content .main-content-nav a:hover {
+  color: #007fff;
+}
+.main-container .main-content .main-content-list {
+  color: #b2bac2;
+}
+.main-container .main-content .main-content-list .content-list-item {
+  position: relative;
+  height: 115px;
+  box-sizing: border-box;
+  padding: 18px 24px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.main-container .main-content .main-content-list .content-list-item .base-info {
+  font-size: 12px;
+}
+.main-container .main-content .main-content-list .content-list-item .text-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2e3135;
+  margin: 6px 0 12px;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments {
+  display: flex;
+  height: 26px;
+  line-height: 26px;
+  box-sizing: border-box;
+  color: #b2bac2;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments div {
+  min-width: 30px;
+  padding: 0 5px;
+  text-align: center;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments .likes {
+  border: 1px solid #eee;
+  border-right: none;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments .comments {
+  border: 1px solid #eee;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments .comments i {
+  vertical-align: middle;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments .share {
+  display: none;
+}
+.main-container .main-content .main-content-list .content-list-item .likes-comments .count {
+  font-weight: 700;
+  margin-left: 3px;
+}
+.main-container .main-content .main-content-list .content-list-item:hover .share {
+  display: block;
+  border: 1px solid #eee;
+  border-left: none;
+}
+.main-container .main-content .main-content-list .content-list-item:hover {
+  background: #fcfcfc;
+}
+.main-container .main-content .main-content-list .content-list-item .text-img {
+  position: absolute;
+  right: 40px;
+  top: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.main-container .main-content .main-content-list .content-list-item .text-img img {
+  width: 60px;
+  height: 60px;
+}
+.main-container .main-content .main-content-list .content-list-item .text-img .hidden {
+  display: none;
+}
+.main-container .side-bar {
+  width: 240px;
+}
+.main-container .side-bar .side-login {
+  height: 270px;
+  font-size: 14px;
+  padding: 16px;
+  background: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.main-container .side-bar .side-login .title {
+  font-weight: 700;
+}
+.main-container .side-bar .side-login .describe {
+  margin-bottom: 6px;
+}
+.main-container .side-bar .side-login .login-input input {
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  background: #fbfbfb;
+}
+.main-container .side-bar .side-login .login-input .phone,
+.main-container .side-bar .side-login .login-input .identify-code {
+  width: 208px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #d9d9d9;
+  background: #fbfbfb;
+  padding: 0 10px;
+  display: flex;
+  box-sizing: border-box;
+}
+.main-container .side-bar .side-login .login-input .phone {
+  margin-bottom: 10px;
+}
+.main-container .side-bar .side-login .login-input .phone .phone-home {
+  width: 62px;
+}
+.main-container .side-bar .side-login .login-input .phone input {
+  width: 126px;
+  height: 34px;
+}
+.main-container .side-bar .side-login .login-input .identify-code {
+  border: 1px solid #eee;
+}
+.main-container .side-bar .side-login .login-input .identify-code input {
+  width: 110px;
+}
+.main-container .side-bar .side-login .login-input .identify-code div {
+  font-size: 14px;
+  color: #007fff;
+  cursor: pointer;
+}
+.main-container .side-bar .side-login .login-btn {
+  width: 100%;
+  height: 34px;
+  color: #fff;
+  border: none;
+  background: #006cff;
+  outline: none;
+  border-radius: 3px;
+  margin: 10px 0 20px;
+}
+.main-container .side-bar .side-login .agreement {
+  color: #767676;
+}
+.main-container .side-bar .side-login .agreement a {
+  color: #007fff;
+}
+.main-container .side-bar .side-download {
+  width: 240px;
+  height: 80px;
+  background: #fff;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.main-container .side-bar .side-download .download-img {
+  width: 50px;
+  height: 50px;
+}
+.main-container .side-bar .side-download .download-tips {
+  margin-left: 10px;
+}
+.main-container .side-bar .side-download .download-tips .tips-title {
+  color: #333;
+  font-weight: 700;
+}
+.main-container .side-bar .side-download .download-tips .tips-desc {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #909090;
+}
+.main-container .side-bar .side-user-block {
+  margin: 20px 0;
+  height: 290px;
+  background: #fff;
+}
+.main-container .side-bar .side-user-block .user-block-header {
+  height: 42px;
+  padding: 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.main-container .side-bar .side-user-block .user-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main-container .side-bar .side-user-block .user-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.main-container .side-bar .side-user-block .user-item .user-info .user-name span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  background: #599dff;
+  padding: 0 2px;
+  border-radius: 1px;
+}
+.main-container .side-bar .side-user-block .user-item .user-info .user-position {
+  font-size: 12px;
+  color: #909090;
+}
+.main-container .side-bar .side-user-block .more {
+  display: flex;
+  height: 41px;
+  line-height: 41px;
+  border-top: 1px solid #eee;
+  justify-content: center;
+  color: #007fff;
+  cursor: pointer;
+}
+.main-container .side-bar .side-link {
+  background: #fff;
+}
+.main-container .side-bar .side-link .link-item {
+  display: flex;
+  height: 60px;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  align-items: center;
+}
+.main-container .side-bar .side-link .link-item img {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=index.css.map */
